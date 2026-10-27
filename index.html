@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Cuts Barber Shop | Minimalist Grooming Studio</title>
+  
+  <!-- Tipografía: Inter (Sans) + Playfair Display (Serif Cursiva Elegante) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            pantone: {
+              base: '#101820',      /* Black 6 C */
+              navy: '#161A2B',      /* Neon Navy */
+              gunpowder: '#454546', /* Gunpowder */
+              silver: '#A8A9AD',    /* Silver */
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Ocultar flecha nativa de summary */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary {
+      list-style: none;
+    }
+    
+    /* Scrollbar horizontal limpia y oculta */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="font-sans bg-[#101820] text-[#A8A9AD] antialiased selection:bg-[#A8A9AD] selection:text-[#101820]">
+
+  <!-- CONTENEDOR PRINCIPAL FLOTANTE (APP WRAPPER) -->
+  <div class="max-w-7xl mx-auto mt-2 sm:mt-6 lg:mt-8 rounded-t-[2.5rem] bg-[#161A2B] border-t border-x border-[#454546]/70 shadow-2xl overflow-hidden">
+    
+    <!-- NAVBAR (LAYOUT FLOTANTE TIPO PÍLDORA) -->
+    <nav class="w-full px-6 sm:px-8 lg:px-12 py-6 flex justify-between items-center border-b border-[#454546]/50">
+      
+      <!-- IZQUIERDA: Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#A8A9AD] group-hover:scale-125 transition-transform duration-300"></span>
+        <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-[#A8A9AD] transition-colors">Good Cuts</span>
+      </a>
+
+      <!-- CENTRO: Enlaces en Contenedor Píldora (Solo PC) -->
+      <div class="hidden md:flex items-center gap-6 bg-[#454546]/40 backdrop-blur-md rounded-full px-6 py-2 border border-[#454546]/50">
+        <a href="#" class="text-xs font-semibold uppercase tracking-wider text-[#A8A9AD] hover:text-white transition-colors">Inicio</a>
+        <a href="#planes" class="text-xs font-semibold uppercase tracking-wider text-[#A8A9AD] hover:text-white transition-colors">Servicios</a>
+        <a href="#testimonios" class="text-xs font-semibold uppercase tracking-wider text-[#A8A9AD] hover:text-white transition-colors">Reseñas</a>
+        <a href="#faq" class="text-xs font-semibold uppercase tracking-wider text-[#A8A9AD] hover:text-white transition-colors">FAQ</a>
+      </div>
+
+      <!-- DERECHA: Botón Silver Principal -->
+      <a href="#reservas" class="inline-flex items-center justify-center bg-[#A8A9AD] hover:bg-white text-[#101820] text-sm font-bold px-6 py-2.5 rounded-full transition-all shadow-sm hover:shadow">
+        Agendar Turno
+      </a>
+
+    </nav>
+
+    <main>
+    <!-- HERO SECTION & BENTO GALLERY -->
+    <section class="pt-16 pb-20 sm:pt-20 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Encabezado Central -->
+        <div class="text-center max-w-4xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#161A2B] border border-[#454546] text-[#A8A9AD] text-xs font-semibold tracking-wide uppercase mb-6 shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#A8A9AD]"></span>
+            Barbería Boutique de Autor
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.12] mb-6">
+            Tu mejor versión <span class="font-serif italic font-normal text-[#A8A9AD]">empieza aquí</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#A8A9AD] max-w-xl mx-auto font-normal leading-relaxed mb-8">
+            Cortes limpios, perfilado artesanal de barba y rituales de bienestar masculino con atención de primer nivel y puntualidad garantizada.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#reservas" class="w-full sm:w-auto inline-flex items-center justify-center bg-[#A8A9AD] hover:bg-white text-[#101820] font-bold px-7 py-3 rounded-full text-sm shadow-xs transition-all">
+              Agendar Turno
+            </a>
+            <a href="#planes" class="w-full sm:w-auto inline-flex items-center justify-center bg-[#161A2B] hover:bg-[#454546] text-white font-semibold px-7 py-3 rounded-full text-sm border border-[#454546] transition-all">
+              Ver Tarifas
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Galería Hero (5 Imágenes Frías, Intercaladas y Difuminadas) -->
+      <div class="w-full overflow-hidden flex justify-center py-8 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]" style="-webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
+        <div class="flex gap-5 items-center justify-center">
+          
+          <!-- Tarjeta 1 (Orilla izq) -->
+          <div class="rounded-3xl overflow-hidden w-48 md:w-60 shrink-0 border border-white/10 shadow-2xl h-64 translate-y-6 group">
+            <img 
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800" 
+              alt="Estilo y corte barbería" 
+              class="w-full h-full object-cover grayscale-[20%] contrast-125 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="rounded-3xl overflow-hidden w-48 md:w-60 shrink-0 border border-white/10 shadow-2xl h-80 -translate-y-2 group">
+            <img 
+              src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=800" 
+              alt="Perfilado y afeitado" 
+              class="w-full h-full object-cover grayscale-[20%] contrast-125 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <!-- Tarjeta 3 (Centro) -->
+          <div class="rounded-3xl overflow-hidden w-48 md:w-60 shrink-0 border border-amber-500/40 shadow-2xl h-96 -translate-y-8 group">
+            <img 
+              src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800" 
+              alt="Corte de autor degradado" 
+              class="w-full h-full object-cover grayscale-[20%] contrast-125 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="rounded-3xl overflow-hidden w-48 md:w-60 shrink-0 border border-white/10 shadow-2xl h-80 -translate-y-2 group">
+            <img 
+              src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800" 
+              alt="Herramientas y tijeras profesionales" 
+              class="w-full h-full object-cover grayscale-[20%] contrast-125 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <!-- Tarjeta 5 (Orilla der) -->
+          <div class="rounded-3xl overflow-hidden w-48 md:w-60 shrink-0 border border-white/10 shadow-2xl h-64 translate-y-6 group">
+            <img 
+              src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800" 
+              alt="Ritual clásico barbería" 
+              class="w-full h-full object-cover grayscale-[20%] contrast-125 group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PLANES Y OFERTA -->
+    <section id="planes" class="py-20 sm:py-24 bg-[#101820] border-y border-[#454546]">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#A8A9AD] mb-2 block">Menú Tarifario</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Planes diseñados a <span class="font-serif italic font-normal text-[#A8A9AD]">tu medida</span>
+          </h2>
+        </div>
+
+        <!-- Grid de 3 Tarjetas en Neon Navy -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Tarjeta 1: Plan Básico -->
+          <div class="bg-[#161A2B] rounded-3xl p-8 border border-[#454546] shadow-sm hover:border-[#A8A9AD]/60 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#A8A9AD]">Esencial</span>
+              </div>
+
+              <h3 class="text-2xl font-black text-white mb-1">Plan Básico</h3>
+              <p class="text-xs text-[#A8A9AD] mb-6">Mantenimiento de estilo rápido y eficiente.</p>
+
+              <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-[#454546]">
+                <span class="text-4xl font-extrabold text-white">Q80</span>
+                <span class="text-xs text-[#A8A9AD] font-medium">/ cita</span>
+              </div>
+
+              <!-- Etiquetas Estilo Pill (Flex Wrap) -->
+              <p class="text-xs font-bold text-[#A8A9AD] uppercase tracking-wider mb-3">Incluye:</p>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Corte a tijera
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Lavado capilar
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Peinado final
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Bebida de cortesía
+                </span>
+              </div>
+            </div>
+
+            <a href="#reservas" class="w-full text-center py-3.5 px-4 rounded-full bg-[#454546] hover:bg-[#A8A9AD] hover:text-[#101820] text-white font-bold text-xs tracking-wider uppercase transition-colors">
+              Reservar Básico
+            </a>
+          </div>
+
+          <!-- Tarjeta 2: Plan Ejecutivo (DESTACADO: Borde Silver y Badge OFERTA ESPECIAL) -->
+          <div class="bg-[#161A2B] rounded-3xl p-8 border-2 border-[#A8A9AD] shadow-lg relative flex flex-col justify-between transform md:-translate-y-2 transition-transform">
+            <!-- Badge Absoluto: OFERTA ESPECIAL -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-[#A8A9AD] text-[#101820] text-[10px] sm:text-xs font-black uppercase tracking-wider shadow-sm">
+              OFERTA ESPECIAL
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#A8A9AD]">Más Solicitado</span>
+              </div>
+
+              <h3 class="text-2xl font-black text-white mb-1">Plan Ejecutivo</h3>
+              <p class="text-xs text-[#A8A9AD] mb-6">Equilibrio maestro entre corte y ritual de barba.</p>
+
+              <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-[#454546]">
+                <span class="text-4xl font-extrabold text-white">Q130</span>
+                <span class="text-xs text-[#A8A9AD] font-medium">/ cita</span>
+              </div>
+
+              <!-- Etiquetas Estilo Pill (Flex Wrap) -->
+              <p class="text-xs font-bold text-[#A8A9AD] uppercase tracking-wider mb-3">Incluye:</p>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Corte a tijera
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Perfilado de barba
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Toalla caliente
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Bebida de cortesía
+                </span>
+              </div>
+            </div>
+
+            <a href="#reservas" class="w-full text-center py-3.5 px-4 rounded-full bg-[#A8A9AD] hover:bg-white text-[#101820] font-extrabold text-xs tracking-wider uppercase transition-colors shadow-sm">
+              Reservar Ejecutivo
+            </a>
+          </div>
+
+          <!-- Tarjeta 3: Plan Premium -->
+          <div class="bg-[#161A2B] rounded-3xl p-8 border border-[#454546] shadow-sm hover:border-[#A8A9AD]/60 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#A8A9AD]">Exclusivo</span>
+              </div>
+
+              <h3 class="text-2xl font-black text-white mb-1">Plan Premium</h3>
+              <p class="text-xs text-[#A8A9AD] mb-6">El ritual supremo de cuidado y relajación.</p>
+
+              <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-[#454546]">
+                <span class="text-4xl font-extrabold text-white">Q175</span>
+                <span class="text-xs text-[#A8A9AD] font-medium">/ cita</span>
+              </div>
+
+              <!-- Etiquetas Estilo Pill (Flex Wrap) -->
+              <p class="text-xs font-bold text-[#A8A9AD] uppercase tracking-wider mb-3">Incluye:</p>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Corte a tijera
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Toalla caliente
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Masaje facial
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#101820] border border-[#454546] text-[#A8A9AD] text-xs font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#A8A9AD] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Bebida de cortesía
+                </span>
+              </div>
+            </div>
+
+            <a href="#reservas" class="w-full text-center py-3.5 px-4 rounded-full bg-[#454546] hover:bg-[#A8A9AD] hover:text-[#101820] text-white font-bold text-xs tracking-wider uppercase transition-colors">
+              Reservar Premium
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MÓDULO DE RESERVAS INTERACTIVO (Neon Navy + Silver) -->
+    <section id="reservas" class="py-20 sm:py-24 bg-[#101820]">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Contenedor Fondo Neon Navy (#161A2B) -->
+        <div class="bg-[#161A2B] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#454546] shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Columna Izquierda: Mensaje Directo -->
+            <div class="lg:col-span-5">
+              <span class="inline-block text-xs font-bold uppercase tracking-wider text-[#A8A9AD] mb-3">
+                Gestión en Línea
+              </span>
+              
+              <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-5 leading-tight">
+                Asegura tu turno <span class="font-serif italic font-normal text-[#E5C158]">hoy mismo</span>
+              </h2>
+
+              <p class="text-sm sm:text-base text-[#A8A9AD] font-normal leading-relaxed mb-8">
+                Compromiso de puntualidad absoluta: elige tu sede, día y hora. Sin filas ni tiempos muertos.
+              </p>
+
+              <div class="space-y-4 border-t border-[#454546] pt-6 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded-lg bg-[#454546]/50 text-[#A8A9AD] flex items-center justify-center shrink-0 border border-[#454546]">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span>Atención puntual en tu horario reservado</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-7 h-7 rounded-lg bg-[#454546]/50 text-[#A8A9AD] flex items-center justify-center shrink-0 border border-[#454546]">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span>Confirmación directa por WhatsApp</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: UI de Reserva con Contenedor Base Oscuro (#101820) -->
+            <div class="lg:col-span-7">
+              <div class="bg-[#101820] rounded-2xl p-6 sm:p-8 border border-[#454546]">
+                
+                <!-- Paso 1 (Sede) -->
+                <div class="mb-6">
+                  <label for="sede-select" class="block text-xs font-bold uppercase tracking-wider text-[#A8A9AD] mb-2">
+                    Paso 1: Selecciona tu Sede
+                  </label>
+                  <div class="relative">
+                    <select id="sede-select" class="w-full appearance-none bg-[#161A2B] border border-[#454546] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] cursor-pointer pr-10 shadow-xs">
+                      <option value="Centro Cívico Sur">Centro Cívico Sur</option>
+                      <option value="San Lucas">San Lucas</option>
+                      <option value="Zona 16">Zona 16</option>
+                    </select>
+                    <div class="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#A8A9AD]">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paso 2 (Fechas: 14 Botones con navegación por flechas y scroll horizontal) -->
+                <div class="mb-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#A8A9AD]">
+                      Paso 2: Fechas Disponibles
+                    </span>
+                    <div class="flex items-center gap-1.5">
+                      <button 
+                        type="button" 
+                        id="btn-fecha-prev" 
+                        aria-label="Fecha anterior"
+                        class="w-8 h-8 rounded-full border border-[#454546] hover:bg-[#454546] flex items-center justify-center transition-colors text-[#A8A9AD] hover:text-white focus:outline-none"
+                      >
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <button 
+                        type="button" 
+                        id="btn-fecha-next" 
+                        aria-label="Fecha siguiente"
+                        class="w-8 h-8 rounded-full border border-[#454546] hover:bg-[#454546] flex items-center justify-center transition-colors text-[#A8A9AD] hover:text-white focus:outline-none"
+                      >
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div 
+                    id="fechas-container" 
+                    class="overflow-x-auto flex gap-3 scroll-smooth pb-2 pt-1 [&::-webkit-scrollbar]:hidden"
+                    style="scrollbar-width: none; -ms-overflow-style: none;"
+                  >
+                    <!-- Botón 1: Lun 26 Oct (Activo por defecto) -->
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-white text-[#101820] border-transparent ring-2 ring-[#E5C158] shadow-[0_0_20px_rgba(255,255,255,0.25)] font-bold">
+                      <span class="day-label block text-[10px] uppercase font-bold text-[#101820]">Lun</span>
+                      <span class="date-label text-xs font-bold text-[#101820]">26 Oct</span>
+                    </button>
+                    <!-- Botones 2 al 14 -->
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Mar</span>
+                      <span class="date-label text-xs font-medium text-white">27 Oct</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Mié</span>
+                      <span class="date-label text-xs font-medium text-white">28 Oct</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Jue</span>
+                      <span class="date-label text-xs font-medium text-white">29 Oct</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Vie</span>
+                      <span class="date-label text-xs font-medium text-white">30 Oct</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Sáb</span>
+                      <span class="date-label text-xs font-medium text-white">31 Oct</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Dom</span>
+                      <span class="date-label text-xs font-medium text-white">1 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Lun</span>
+                      <span class="date-label text-xs font-medium text-white">2 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-gray-300 border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Mar</span>
+                      <span class="date-label text-xs font-medium text-white">3 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Mié</span>
+                      <span class="date-label text-xs font-medium text-white">4 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Jue</span>
+                      <span class="date-label text-xs font-medium text-white">5 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Vie</span>
+                      <span class="date-label text-xs font-medium text-white">6 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Sáb</span>
+                      <span class="date-label text-xs font-medium text-white">7 Nov</span>
+                    </button>
+                    <button type="button" class="date-btn shrink-0 px-3.5 py-2.5 rounded-xl border text-xs text-center transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50">
+                      <span class="day-label block text-[10px] uppercase text-[#A8A9AD]">Dom</span>
+                      <span class="date-label text-xs font-medium text-white">8 Nov</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Paso 3 (Horarios: grid-cols-3) -->
+                <div class="mb-6">
+                  <label class="block text-xs font-bold uppercase tracking-wider text-[#A8A9AD] mb-2">
+                    Paso 3: Horarios Laborales
+                  </label>
+                  <div id="time-container" class="grid grid-cols-3 gap-2">
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      08:00 AM
+                    </button>
+                    <!-- 09:30 AM activo por defecto -->
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-white text-[#101820] border-transparent ring-2 ring-[#E5C158] shadow-[0_0_20px_rgba(255,255,255,0.25)] font-bold">
+                      09:30 AM
+                    </button>
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      11:00 AM
+                    </button>
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      01:00 PM
+                    </button>
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      03:30 PM
+                    </button>
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      05:00 PM
+                    </button>
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      06:30 PM
+                    </button>
+                    <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
+                      08:00 PM
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Botón Gigante Final -->
+                <button id="confirm-btn" type="button" class="w-full py-4 rounded-xl bg-white hover:bg-[#E5C158] text-[#101820] font-extrabold text-base tracking-wide transition-all shadow-lg duration-300 active:scale-[0.99] flex items-center justify-center gap-2">
+                  <span>Confirmar Reserva</span>
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+
+                <!-- Feedback de Reserva (JS) -->
+                <p id="booking-feedback" class="hidden text-xs text-center text-white mt-3 font-medium bg-[#161A2B] p-3 rounded-xl border border-[#454546]"></p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE RESEÑAS (MASONRY DESFASADO CON EFECTO DE CARRUSEL INFINITO) -->
+    <section id="testimonios" class="py-24 sm:py-32 bg-[#101820] border-t border-[#454546] relative overflow-hidden">
+      
+      <!-- Máscaras de desvanecimiento lateral para efecto infinito/asomado -->
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 lg:w-48 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent z-10"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 lg:w-48 bg-gradient-to-l from-[#101820] via-[#101820]/80 to-transparent z-10"></div>
+
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-xl mx-auto mb-16 sm:mb-20">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#A8A9AD] mb-2 block">Experiencias Reales</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Lo que dicen de <span class="font-serif italic font-normal text-[#A8A9AD]">nosotros.</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Contenedor Flex Masonry Desfasado (Sin Grid) -->
+      <div class="flex overflow-hidden justify-center gap-6 relative px-4 py-8">
+        
+        <!-- Columna Asomada Izquierda (Baja Opacidad) -->
+        <div class="hidden xl:flex flex-col gap-6 w-72 sm:w-80 shrink-0 opacity-30 select-none pointer-events-none transform -translate-y-2">
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Servicio impecable en cada visita. La puntualidad y pulcritud son inmejorables."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=120" alt="Avatar Cliente" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Marcos Véliz</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Cliente / Zona 16</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 1: Desfase translate-y-8 -->
+        <div class="flex flex-col gap-6 w-72 sm:w-80 shrink-0 transform translate-y-8">
+          
+          <!-- Tarjeta 1 -->
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between hover:border-[#A8A9AD]/50 transition-all">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Excelente atención, el mejor fade de Villa Nueva. Puntuales y con un nivel de detalle impecable en cada corte."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=120" alt="Avatar Carlos Morales" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Carlos Morales</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Cliente Frecuente / Villa Nueva</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between hover:border-[#A8A9AD]/50 transition-all">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Productos de primera y navajas esterilizadas. La limpieza y el profesionalismo se notan desde que entras."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=120" alt="Avatar Esteban Castillo" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Esteban Castillo</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Diseñador Gráfico / Zona 16</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna 2: Central con Desfase -translate-y-4 -->
+        <div class="flex flex-col gap-6 w-72 sm:w-80 shrink-0 transform -translate-y-4">
+          
+          <!-- Tarjeta 3 -->
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between hover:border-[#A8A9AD]/50 transition-all">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "El ritual de toalla caliente y navaja japonesa es insuperable. Un servicio de calidad boutique en San Lucas."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120" alt="Avatar Rodrigo Salazar" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Rodrigo Salazar</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Empresario / San Lucas Sacatepéquez</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between hover:border-[#A8A9AD]/50 transition-all">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Siempre puntuales y el café de cortesía es un detalle 10/10. Muy agradecido con el servicio impecable."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=120" alt="Avatar Javier Méndez" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Javier Méndez</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Consultor / Ciudad de Guatemala</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna 3: Desfase translate-y-12 -->
+        <div class="flex flex-col gap-6 w-72 sm:w-80 shrink-0 transform translate-y-12">
+          
+          <!-- Tarjeta 5 -->
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between hover:border-[#A8A9AD]/50 transition-all">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Instalaciones de primer nivel en Plaza Cascata. El sistema de reserva online te ahorra horas de espera."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120" alt="Avatar Diego Arriola" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Diego Arriola</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Arquitecto / Zona 16</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 6 -->
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between hover:border-[#A8A9AD]/50 transition-all">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Excelente paciencia con los cortes para niños. Mi hijo de 7 años siempre pide venir a Good Cuts."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=120" alt="Avatar Alejandro Fuentes" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Alejandro Fuentes</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Padre de Familia / Villa Nueva</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna Asomada Derecha (Baja Opacidad) -->
+        <div class="hidden xl:flex flex-col gap-6 w-72 sm:w-80 shrink-0 opacity-30 select-none pointer-events-none transform translate-y-4">
+          <div class="bg-[#161A2B] p-6 rounded-2xl shadow-sm border border-[#454546] flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-[#A8A9AD] mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "La mejor opción para mantener el estilo sin esperas en Centro Cívico Sur."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#454546]">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=120" alt="Avatar Cliente" class="w-10 h-10 rounded-full bg-[#454546] object-cover shrink-0 border border-[#454546]" />
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Gabriel Soto</p>
+                <p class="text-[11px] text-[#A8A9AD] mt-0.5 leading-tight">Cliente / Villa Nueva</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ FUNCIONALES) -->
+    <section id="faq" class="py-20 sm:py-24 bg-[#101820] border-t border-[#454546]">
+      <div class="max-w-3xl mx-auto px-6">
+        
+        <!-- Título: 'Preguntas' en Serif cursiva, 'Frecuentes' en Sans-serif normal -->
+        <div class="text-center mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#A8A9AD] mb-2 block">Dudas Comunes</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <span class="font-serif italic font-normal text-[#A8A9AD]">Preguntas</span> Frecuentes.
+          </h2>
+        </div>
+
+        <!-- Lista Apilada de 5 Preguntas con details y summary -->
+        <div class="space-y-3">
+          
+          <!-- Pregunta 1 -->
+          <details class="group bg-[#161A2B] rounded-xl border border-[#454546] p-4 cursor-pointer shadow-xs transition hover:border-[#A8A9AD]/60">
+            <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
+              <span>¿Cuánto tiempo dura el servicio?</span>
+              <div class="w-7 h-7 rounded-lg bg-[#454546] text-[#A8A9AD] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#454546]">
+                <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </summary>
+            <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#454546] mt-3">
+              Un corte clásico toma entre 30 y 40 minutos. Si seleccionas el Plan Ejecutivo o Premium con ritual de barba y toalla caliente, el tiempo es de 50 a 60 minutos dedicados exclusivamente a ti.
+            </div>
+          </details>
+
+          <!-- Pregunta 2 -->
+          <details class="group bg-[#161A2B] rounded-xl border border-[#454546] p-4 cursor-pointer shadow-xs transition hover:border-[#A8A9AD]/60">
+            <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
+              <span>¿Aceptan tarjeta y pagos digitales?</span>
+              <div class="w-7 h-7 rounded-lg bg-[#454546] text-[#A8A9AD] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#454546]">
+                <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </summary>
+            <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#454546] mt-3">
+              Sí, aceptamos todas las tarjetas de crédito y débito (Visa y Mastercard), transferencias bancarias directas y pagos en efectivo en cualquiera de nuestras tres sedes.
+            </div>
+          </details>
+
+          <!-- Pregunta 3 -->
+          <details class="group bg-[#161A2B] rounded-xl border border-[#454546] p-4 cursor-pointer shadow-xs transition hover:border-[#A8A9AD]/60">
+            <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
+              <span>¿Qué pasa si llego tarde a mi turno?</span>
+              <div class="w-7 h-7 rounded-lg bg-[#454546] text-[#A8A9AD] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#454546]">
+                <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </summary>
+            <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#454546] mt-3">
+              Contamos con una tolerancia de 10 minutos de cortesía. Si prevés un retraso superior, avísanos con anticipación por WhatsApp para reajustar tu espacio sin contratiempos.
+            </div>
+          </details>
+
+          <!-- Pregunta 4 -->
+          <details class="group bg-[#161A2B] rounded-xl border border-[#454546] p-4 cursor-pointer shadow-xs transition hover:border-[#A8A9AD]/60">
+            <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
+              <span>¿Es necesario reservar cita previa o atienden por orden de llegada?</span>
+              <div class="w-7 h-7 rounded-lg bg-[#454546] text-[#A8A9AD] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#454546]">
+                <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </summary>
+            <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#454546] mt-3">
+              Puedes visitarnos sin cita previa según disponibilidad, pero reservar en línea garantiza que tu barbero esté listo para recibirte en el minuto exacto sin esperas.
+            </div>
+          </details>
+
+          <!-- Pregunta 5 -->
+          <details class="group bg-[#161A2B] rounded-xl border border-[#454546] p-4 cursor-pointer shadow-xs transition hover:border-[#A8A9AD]/60">
+            <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
+              <span>¿Qué medidas de higiene y esterilización aplican?</span>
+              <div class="w-7 h-7 rounded-lg bg-[#454546] text-[#A8A9AD] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#454546]">
+                <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </summary>
+            <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#454546] mt-3">
+              Empleamos navajas descartables de un solo uso y esterilizamos cada herramienta metálica en solución de grado hospitalario y luz UV antes de atender a cada cliente.
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#101820] border-t border-[#454546] py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#A8A9AD] gap-6">
+      
+      <!-- Marca y Derechos -->
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-white tracking-tight">Good Cuts Barber Shop</span>
+        <span class="text-[#454546]">|</span>
+        <span>&copy; 2026 Todos los derechos reservados.</span>
+      </div>
+
+      <!-- Redes Sociales (Íconos SVG Puros) -->
+      <div class="flex items-center gap-5">
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" class="text-[#A8A9AD] hover:text-white transition-colors">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram" class="text-[#A8A9AD] hover:text-white transition-colors">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="#" aria-label="WhatsApp" class="text-[#A8A9AD] hover:text-white transition-colors">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+  </div>
+
+  <!-- SCRIPT NATIVO DE INTERACTIVIDAD PARA EL MÓDULO DE RESERVAS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let selectedDate = 'Lun 26 Oct';
+      let selectedTime = '09:30 AM';
+      let selectedVenue = document.getElementById('sede-select').value;
+
+      const dateButtons = document.querySelectorAll('.date-btn');
+      const timeButtons = document.querySelectorAll('.time-btn');
+      const venueSelect = document.getElementById('sede-select');
+      const confirmBtn = document.getElementById('confirm-btn');
+      const feedback = document.getElementById('booking-feedback');
+
+      // Navegación con flechas para fechas
+      const fechasContainer = document.getElementById('fechas-container');
+      const btnFechaPrev = document.getElementById('btn-fecha-prev');
+      const btnFechaNext = document.getElementById('btn-fecha-next');
+
+      if (fechasContainer && btnFechaPrev && btnFechaNext) {
+        btnFechaPrev.addEventListener('click', () => {
+          fechasContainer.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        btnFechaNext.addEventListener('click', () => {
+          fechasContainer.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+      }
+
+      // Clases activas vs inactivas (Paleta Pantone Luxury con alto contraste)
+      const activeBtnClasses = ['bg-white', 'text-[#101820]', 'border-transparent', 'ring-2', 'ring-[#E5C158]', 'shadow-[0_0_20px_rgba(255,255,255,0.25)]', 'font-bold'];
+      const inactiveDateClasses = ['bg-[#161A2B]', 'text-white', 'border-[#454546]', 'hover:border-white/50'];
+      const inactiveTimeClasses = ['bg-[#161A2B]', 'text-white', 'border-[#454546]', 'hover:border-white/50', 'font-medium'];
+
+      // Función para alternar fecha activa restaurando visibilidad absoluta de textos
+      function setDateActive(btn, isActive) {
+        const daySpan = btn.querySelector('.day-label');
+        const dateSpan = btn.querySelector('.date-label');
+
+        if (isActive) {
+          btn.classList.remove(...inactiveDateClasses);
+          btn.classList.add(...activeBtnClasses);
+          if (daySpan) {
+            daySpan.className = 'day-label block text-[10px] uppercase font-bold text-[#101820]';
+          }
+          if (dateSpan) {
+            dateSpan.className = 'date-label text-xs font-bold text-[#101820]';
+          }
+        } else {
+          btn.classList.remove(...activeBtnClasses);
+          btn.classList.add(...inactiveDateClasses);
+          if (daySpan) {
+            daySpan.className = 'day-label block text-[10px] uppercase text-[#A8A9AD]';
+          }
+          if (dateSpan) {
+            dateSpan.className = 'date-label text-xs font-medium text-white';
+          }
+        }
+      }
+
+      // Interactividad para selección de fechas
+      dateButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          dateButtons.forEach(b => setDateActive(b, false));
+          setDateActive(btn, true);
+          const dateSpan = btn.querySelector('.date-label');
+          if (dateSpan) {
+            selectedDate = dateSpan.textContent.trim();
+          }
+        });
+      });
+
+      // Interactividad para selección de horarios
+      timeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          timeButtons.forEach(b => {
+            b.classList.remove(...activeBtnClasses);
+            b.classList.add(...inactiveTimeClasses);
+          });
+          btn.classList.remove(...inactiveTimeClasses);
+          btn.classList.add(...activeBtnClasses);
+          selectedTime = btn.textContent.trim();
+        });
+      });
+
+      // Cambio de sede
+      venueSelect.addEventListener('change', (e) => {
+        selectedVenue = e.target.value;
+      });
+
+      // Confirmar reserva
+      confirmBtn.addEventListener('click', () => {
+        feedback.textContent = `Turno confirmado: Sede ${selectedVenue} el ${selectedDate} a las ${selectedTime}. Te esperamos.`;
+        feedback.classList.remove('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
