@@ -821,12 +821,15 @@
         <!-- Grid de Tarjetas de Productos (Sin Etiquetas Flotantes Sucias) -->
         <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          <!-- PRODUCTO 1: Matte Clay Pomade -->
+          <!-- PRODUCTO: Matte Styling Clay (Fijación Fuerte) -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="cabello" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-1">
               <img 
                 src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800" 
-                alt="Matte Styling Clay Pomade" 
+                alt="Matte Styling Clay (Fijación Fuerte)" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105"
               />
@@ -834,38 +837,80 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Curology Barber Grade</span>
+                  <span class="text-neutral-400">100 ml / 3.4 oz • Acabado Mate</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-1">
                   Matte Styling Clay (Fijación Fuerte)
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Arcilla moldeadora con acabado mate natural sin brillo. Brinda textura densa y fijación flexible resistente a la humedad.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-1"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Unitario</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q145</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Matte Styling Clay (Fijación Fuerte)"
-                  data-price="Q145"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-1"
+                    data-name="Matte Styling Clay (Fijación Fuerte)"
+                    data-price="145"
+                    data-pricestr="Q145"
+                    data-image="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800"
+                    data-brand="Curology Barber Grade"
+                    data-specs="100 ml / 3.4 oz • Acabado Mate"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Matte Styling Clay (Fijación Fuerte)"
+                    data-price="Q145"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 2: Classic Water-Based Pomade -->
+          <!-- PRODUCTO: Classic Water-Based Pomade -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="cabello" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-2">
               <img 
                 src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800" 
                 alt="Classic Water-Based Pomade" 
@@ -876,41 +921,83 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Maui Moisture Barber Line</span>
+                  <span class="text-neutral-400">120 ml / 4.2 oz • Brillo Medio</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-2">
                   Classic Water-Based Pomade
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Fórmula a base de agua de brillo medio tradicional. Fijación controlada para cortes clásicos, pompadours y peinados de raya al lado.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-2"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Unitario</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q135</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Classic Water-Based Pomade"
-                  data-price="Q135"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-2"
+                    data-name="Classic Water-Based Pomade"
+                    data-price="135"
+                    data-pricestr="Q135"
+                    data-image="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800"
+                    data-brand="Maui Moisture Barber Line"
+                    data-specs="120 ml / 4.2 oz • Brillo Medio"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Classic Water-Based Pomade"
+                    data-price="Q135"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 3: Tónico Capilar Fortificante -->
+          <!-- PRODUCTO: Tónico Capilar Fortificante & Grooming -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="cabello" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-3">
               <img 
                 src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800" 
-                alt="Tónico Capilar Fortificante & Grooming Tonic" 
+                alt="Tónico Capilar Fortificante & Grooming" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105"
               />
@@ -918,38 +1005,80 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Act+Acre Cold Processed</span>
+                  <span class="text-neutral-400">200 ml / 6.7 fl oz • Atomizador</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-3">
                   Tónico Capilar Fortificante & Grooming
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Con extractos puros de romero, menta y biotina. Aporta cuerpo, ligereza y protección térmica antes del uso del secador.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-3"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Unitario</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q160</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Tónico Capilar Fortificante & Grooming"
-                  data-price="Q160"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-3"
+                    data-name="Tónico Capilar Fortificante & Grooming"
+                    data-price="160"
+                    data-pricestr="Q160"
+                    data-image="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800"
+                    data-brand="Act+Acre Cold Processed"
+                    data-specs="200 ml / 6.7 fl oz • Atomizador"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Tónico Capilar Fortificante & Grooming"
+                    data-price="Q160"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 4: Lattafa Khamrah Eau de Parfum -->
+          <!-- PRODUCTO: Lattafa Khamrah Eau de Parfum -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="perfumeria" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-4">
               <img 
                 src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800" 
                 alt="Lattafa Khamrah Eau de Parfum" 
@@ -960,38 +1089,80 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
-                  Lattafa Khamrah Eau de Parfum (100ml)
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Lattafa Perfumes (Dubái)</span>
+                  <span class="text-neutral-400">100 ml / 3.4 oz • Eau de Parfum</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-4">
+                  Lattafa Khamrah Eau de Parfum
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   La cumbre oriental: canela dulce, nuez moscada, praliné, dátiles y un fondo embriagador de vainilla bourbon y maderas aromáticas.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-4"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Especial</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q380</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Lattafa Khamrah Eau de Parfum (100ml)"
-                  data-price="Q380"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-4"
+                    data-name="Lattafa Khamrah Eau de Parfum"
+                    data-price="380"
+                    data-pricestr="Q380"
+                    data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800"
+                    data-brand="Lattafa Perfumes (Dubái)"
+                    data-specs="100 ml / 3.4 oz • Eau de Parfum"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Lattafa Khamrah Eau de Parfum"
+                    data-price="Q380"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 5: Lattafa Asad Eau de Parfum -->
+          <!-- PRODUCTO: Lattafa Asad Eau de Parfum -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="perfumeria" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-5">
               <img 
                 src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800" 
                 alt="Lattafa Asad Eau de Parfum" 
@@ -1002,41 +1173,83 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
-                  Lattafa Asad Eau de Parfum (100ml)
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Lattafa Perfumes (Dubái)</span>
+                  <span class="text-neutral-400">100 ml / 3.4 oz • Eau de Parfum</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-5">
+                  Lattafa Asad Eau de Parfum
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Estilo masculino audaz con pimienta negra, café tostado, tabaco ahumado, iris cremoso y una estela de ámbar seco irresistible.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-5"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Especial</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q350</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Lattafa Asad Eau de Parfum (100ml)"
-                  data-price="Q350"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-5"
+                    data-name="Lattafa Asad Eau de Parfum"
+                    data-price="350"
+                    data-pricestr="Q350"
+                    data-image="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800"
+                    data-brand="Lattafa Perfumes (Dubái)"
+                    data-specs="100 ml / 3.4 oz • Eau de Parfum"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Lattafa Asad Eau de Parfum"
+                    data-price="Q350"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 6: Club de Nuit Intense Man -->
+          <!-- PRODUCTO: Club de Nuit Intense Man (Armaf) -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="perfumeria" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-6">
               <img 
                 src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800" 
-                alt="Armaf Club de Nuit Intense Man" 
+                alt="Club de Nuit Intense Man (Armaf)" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105"
               />
@@ -1044,36 +1257,75 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
-                  Club de Nuit Intense Man (Armaf 105ml)
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Armaf Parfums (Francia / UAE)</span>
+                  <span class="text-neutral-400">105 ml / 3.6 oz • Eau de Parfum</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-6">
+                  Club de Nuit Intense Man (Armaf)
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   La icónica fragancia ahumada con notas de limón cítrico, piña fresca, abedul negro, jazmín y pachulí oscuro. Máxima longevidad.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-6"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Especial</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q395</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Club de Nuit Intense Man (Armaf 105ml)"
-                  data-price="Q395"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-6"
+                    data-name="Club de Nuit Intense Man (Armaf)"
+                    data-price="395"
+                    data-pricestr="Q395"
+                    data-image="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800"
+                    data-brand="Armaf Parfums (Francia / UAE)"
+                    data-specs="105 ml / 3.6 oz • Eau de Parfum"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Club de Nuit Intense Man (Armaf)"
+                    data-price="Q395"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 7: Sauvage Elixir Edition (SOLD OUT CON LISTÓN ROJO) -->
+          <!-- PRODUCTO: Sauvage Elixir Edition -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="perfumeria" data-stock="soldout">
             
             <!-- Listón Rojo Diagonal SOLD OUT -->
@@ -1083,10 +1335,11 @@
               </div>
             </div>
 
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-7">
               <img 
                 src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=800" 
-                alt="Sauvage Elixir Eau de Parfum" 
+                alt="Sauvage Elixir Edition" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105 opacity-50 grayscale-[40%]"
               />
@@ -1094,25 +1347,45 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
-                  Sauvage Elixir Edition (60ml)
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Dior Parfums (Francia)</span>
+                  <span class="text-neutral-400">60 ml / 2.0 oz • Elixir Concentrado</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-7">
+                  Sauvage Elixir Edition
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Concentrado nocturno de lavanda silvestre, licor de maderas nobles, cardamomo ardiente y nuez moscada. La firma olfativa definitiva.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-7"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Exclusivo</span>
-                  <span class="text-2xl font-black text-neutral-300">Q780</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
+                  <span class="text-2xl font-black text-neutral-400 transition-colors">Q780</span>
                 </div>
 
+                
                 <!-- Botón Agotado con Consulta de Reingreso -->
                 <button 
                   type="button" 
-                  class="btn-sold-out-inquiry w-full py-3.5 px-4 rounded-2xl bg-red-950/40 hover:bg-red-900/60 text-red-300 hover:text-white border border-red-700/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
-                  data-name="Sauvage Elixir Edition (60ml)"
+                  class="btn-sold-out-inquiry w-full py-3 px-4 rounded-2xl bg-red-950/40 hover:bg-red-900/60 text-red-300 hover:text-white border border-red-700/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  data-name="Sauvage Elixir Edition"
                   data-price="Q780"
                 >
                   <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
@@ -1122,9 +1395,12 @@
             </div>
           </article>
 
-          <!-- PRODUCTO 8: Lentes Urban Matte Black -->
+          <!-- PRODUCTO: Lentes Urban Matte Black Edition -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="accesorios" data-stock="available">
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            
+
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-8">
               <img 
                 src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800" 
                 alt="Lentes Urban Matte Black Edition" 
@@ -1135,36 +1411,75 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Barber Studio Optics</span>
+                  <span class="text-neutral-400">Montura TR-90 • Polarizado UV400</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-8">
                   Lentes Urban Matte Black Edition
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Montura geométrica en negro carbón mate de alta resistencia. Lunas polarizadas con filtro UV400 y bisagras de titanio reforzado.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-8"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Unitario</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
                   <span class="text-2xl font-black text-white group-hover:text-yellow-400 transition-colors">Q220</span>
                 </div>
 
-                <button 
-                  type="button" 
-                  class="btn-white-shine btn-whatsapp-buy w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2"
-                  data-name="Lentes Urban Matte Black Edition"
-                  data-price="Q220"
-                >
-                  <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Comprar por WhatsApp</span>
-                </button>
+                
+                <!-- Botones de Acción: Carrito y Compra Directa -->
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button 
+                    type="button" 
+                    class="btn-add-to-cart btn-white-shine w-full py-3 px-3 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-1.5"
+                    data-id="prod-8"
+                    data-name="Lentes Urban Matte Black Edition"
+                    data-price="220"
+                    data-pricestr="Q220"
+                    data-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800"
+                    data-brand="Barber Studio Optics"
+                    data-specs="Montura TR-90 • Polarizado UV400"
+                  >
+                    <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>+ Carrito</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="btn-whatsapp-buy w-full py-3 px-3 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    data-name="Lentes Urban Matte Black Edition"
+                    data-price="Q220"
+                  >
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Directo</span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUCTO 9: Lentes Aviator Gold & Dark Smoke (SOLD OUT CON LISTÓN ROJO) -->
+          <!-- PRODUCTO: Lentes Aviator Gold & Dark Smoke -->
           <article class="product-card group bg-[#0D0D0D] rounded-3xl border border-[#262626] overflow-hidden flex flex-col justify-between hover:border-neutral-500 transition-all duration-300 shadow-xl relative" data-category="accesorios" data-stock="soldout">
             
             <!-- Listón Rojo Diagonal SOLD OUT -->
@@ -1174,7 +1489,8 @@
               </div>
             </div>
 
-            <div class="relative w-full aspect-square overflow-hidden bg-black">
+            <!-- Imagen del Producto -->
+            <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-9">
               <img 
                 src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800" 
                 alt="Lentes Aviator Gold & Dark Smoke" 
@@ -1185,24 +1501,44 @@
 
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2">
+                <!-- Ficha Técnica Rápida (Marca & Presentación ML) -->
+                <div class="flex items-center justify-between text-[11px] mb-2 font-semibold">
+                  <span class="text-yellow-400 font-bold uppercase tracking-wider">Barber Studio Optics</span>
+                  <span class="text-neutral-400">Aleación Dorada • Lunas Minerales</span>
+                </div>
+
+                <h3 class="product-title text-lg font-bold text-white group-hover:text-yellow-400 transition-colors leading-snug mb-2 cursor-pointer btn-open-modal" data-id="prod-9">
                   Lentes Aviator Gold & Dark Smoke
                 </h3>
-                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-5">
+                <p class="product-desc text-xs text-neutral-300 leading-relaxed mb-4">
                   Estructura metálica dorada ligera con diseño de doble puente, almohadillas de silicona anatómica y lunas ahumadas de alto confort visual.
                 </p>
+
+                <!-- Botón Ver Detalles / Ficha Técnica -->
+                <button 
+                  type="button" 
+                  class="btn-open-modal inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors mb-5 group/modal focus:outline-none"
+                  data-id="prod-9"
+                >
+                  <svg class="w-3.5 h-3.5 text-yellow-400 group-hover/modal:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span class="underline underline-offset-4 decoration-neutral-700 hover:decoration-yellow-400">Ver Ficha Técnica & Modo de Uso</span>
+                </button>
               </div>
 
               <div>
                 <div class="flex items-baseline justify-between pt-4 border-t border-[#262626] mb-4">
-                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio Unitario</span>
-                  <span class="text-2xl font-black text-neutral-300">Q240</span>
+                  <span class="text-xs uppercase font-semibold text-neutral-400">Precio</span>
+                  <span class="text-2xl font-black text-neutral-400 transition-colors">Q240</span>
                 </div>
 
+                
                 <!-- Botón Agotado con Consulta de Reingreso -->
                 <button 
                   type="button" 
-                  class="btn-sold-out-inquiry w-full py-3.5 px-4 rounded-2xl bg-red-950/40 hover:bg-red-900/60 text-red-300 hover:text-white border border-red-700/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  class="btn-sold-out-inquiry w-full py-3 px-4 rounded-2xl bg-red-950/40 hover:bg-red-900/60 text-red-300 hover:text-white border border-red-700/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                   data-name="Lentes Aviator Gold & Dark Smoke"
                   data-price="Q240"
                 >
@@ -1788,6 +2124,106 @@
             </div>
           </div>
 
+                    <!-- Horarios de Apertura Oficiales e Información Adicional -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-7 rounded-2xl bg-black border border-[#262626] mb-6 shadow-inner">
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4 flex items-center gap-2">
+                <svg class="w-4 h-4 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Horario de Apertura</span>
+              </h4>
+              <ul class="space-y-2.5 text-xs">
+                <li class="flex items-center justify-between pb-2 border-b border-[#262626]/80">
+                  <span class="flex items-center gap-2.5 font-medium text-white">
+                    <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+                    Lunes
+                  </span>
+                  <span class="font-bold text-neutral-200">8:00 - 20:00</span>
+                </li>
+                <li class="flex items-center justify-between pb-2 border-b border-[#262626]/80">
+                  <span class="flex items-center gap-2.5 font-medium text-white">
+                    <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+                    Martes
+                  </span>
+                  <span class="font-bold text-neutral-200">9:00 - 20:00</span>
+                </li>
+                <li class="flex items-center justify-between pb-2 border-b border-[#262626]/80">
+                  <span class="flex items-center gap-2.5 font-bold text-yellow-400">
+                    <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+                    Miércoles
+                  </span>
+                  <span class="font-bold text-yellow-400">9:00 - 20:00</span>
+                </li>
+                <li class="flex items-center justify-between pb-2 border-b border-[#262626]/80">
+                  <span class="flex items-center gap-2.5 font-medium text-white">
+                    <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+                    Jueves
+                  </span>
+                  <span class="font-bold text-neutral-200">9:00 - 20:00</span>
+                </li>
+                <li class="flex items-center justify-between pb-2 border-b border-[#262626]/80">
+                  <span class="flex items-center gap-2.5 text-neutral-500">
+                    <span class="w-2 h-2 rounded-full bg-neutral-600"></span>
+                    Viernes
+                  </span>
+                  <span class="font-semibold text-neutral-500 uppercase tracking-wider text-[11px]">Cerrado</span>
+                </li>
+                <li class="flex items-center justify-between pb-2 border-b border-[#262626]/80">
+                  <span class="flex items-center gap-2.5 text-neutral-500">
+                    <span class="w-2 h-2 rounded-full bg-neutral-600"></span>
+                    Sábado
+                  </span>
+                  <span class="font-semibold text-neutral-500 uppercase tracking-wider text-[11px]">Cerrado</span>
+                </li>
+                <li class="flex items-center justify-between">
+                  <span class="flex items-center gap-2.5 text-neutral-500">
+                    <span class="w-2 h-2 rounded-full bg-neutral-600"></span>
+                    Domingo
+                  </span>
+                  <span class="font-semibold text-neutral-500 uppercase tracking-wider text-[11px]">Cerrado</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col justify-between pt-4 md:pt-0 md:pl-4 border-t md:border-t-0 md:border-l border-[#262626]">
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4 flex items-center gap-2">
+                  <svg class="w-4 h-4 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Información Adicional</span>
+                </h4>
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0D0D0D] border border-[#262626]">
+                    <svg class="w-4 h-4 text-[#25D366] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                      <p class="font-bold text-white">Confirmación Instantánea</p>
+                      <p class="text-[11px] text-neutral-400 mt-0.5">Reserva tu turno y coordina la llegada directamente con tu barbero.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0D0D0D] border border-[#262626]">
+                    <svg class="w-4 h-4 text-yellow-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <div>
+                      <p class="font-bold text-white">Ubicación Privilegiada</p>
+                      <p class="text-[11px] text-neutral-400 mt-0.5">Altos de Bárcenas 2 y 3, Callejón, Villa Nueva, Guatemala.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-t border-[#262626] flex items-center justify-between text-[11px] text-neutral-400">
+                <span>Atención personalizada con cita</span>
+                <span class="text-yellow-400 font-bold">Puntualidad 100%</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Mapa Cuadrado Responsivo con Bordes Redondeados -->
           <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden border border-[#262626] shadow-inner bg-[#000000] mb-6">
             <iframe 
@@ -1850,32 +2286,40 @@
         <span>&copy; 2026 Todos los derechos reservados.</span>
       </div>
 
-      <!-- Redes Sociales (Íconos SVG Puros) -->
-      <div class="flex items-center gap-5">
-        <!-- Facebook -->
-        <a href="#" aria-label="Facebook" class="text-[#E5E7EB] hover:text-white transition-colors">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
-        </a>
-
-        <!-- Instagram -->
-        <a href="#" aria-label="Instagram" class="text-[#E5E7EB] hover:text-white transition-colors">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <!-- Redes Sociales Oficiales (Únicamente Instagram & TikTok) -->
+      <div class="flex items-center gap-4">
+        <!-- Instagram Oficial -->
+        <a 
+          href="https://www.instagram.com/crisanto_21/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="Instagram de Barber Studio Crisanto" 
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0D0D0D] border border-[#262626] text-neutral-300 hover:text-white hover:border-yellow-400 transition-all text-xs"
+        >
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
+          <span class="font-medium">@crisanto_21</span>
         </a>
 
-        <!-- WhatsApp -->
-        <a href="https://wa.me/50255554444" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-[#E5E7EB] hover:text-[#25D366] transition-colors">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        <!-- TikTok Oficial -->
+        <a 
+          href="https://www.tiktok.com/@crisanto_barber?lang=es-419" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="TikTok de Barber Studio Crisanto" 
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0D0D0D] border border-[#262626] text-neutral-300 hover:text-white hover:border-yellow-400 transition-all text-xs"
+        >
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.41a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.3 6.3 0 0 0 1.87-4.48V8.75a8.28 8.28 0 0 0 4.84 1.56V6.86a4.85 4.85 0 0 1-.94-.17z"/>
           </svg>
+          <span class="font-medium">@crisanto_barber</span>
         </a>
       </div>
 
     </div>
   </footer>
+  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -2152,8 +2596,709 @@
         });
       });
 
+
+      // ==========================================
+      // BASE DE DATOS LOCAL DE PRODUCTOS
+      // ==========================================
+      const productsData = [
+  {
+    "id": "prod-1",
+    "name": "Matte Styling Clay (Fijación Fuerte)",
+    "brand": "Curology Barber Grade",
+    "specs": "100 ml / 3.4 oz • Acabado Mate",
+    "price": 145,
+    "priceStr": "Q145",
+    "category": "cabello",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800",
+    "shortDesc": "Arcilla moldeadora con acabado mate natural sin brillo. Brinda textura densa y fijación flexible resistente a la humedad.",
+    "purpose": "Diseñada para estructurar peinados modernos, desvanecidos con textura superior y cortes 'messy' o 'crop' que requieren control total sin brillo artificial ni residuos grasos.",
+    "techDetails": "Fórmula enriquecida con arcilla de bentonita volcánica, cera natural de abejas y polímeros fijadores hidrófilos. No satura los folículos y es resistente al sudor urbano.",
+    "howToUse": "Frotar una cantidad del tamaño de una moneda entre las palmas hasta que quede transparente. Aplicar de raíz a puntas sobre cabello seco o 80% seco para máxima textura."
+  },
+  {
+    "id": "prod-2",
+    "name": "Classic Water-Based Pomade",
+    "brand": "Maui Moisture Barber Line",
+    "specs": "120 ml / 4.2 oz • Brillo Medio",
+    "price": 135,
+    "priceStr": "Q135",
+    "category": "cabello",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800",
+    "shortDesc": "Fórmula a base de agua de brillo medio tradicional. Fijación controlada para cortes clásicos, pompadours y peinados de raya al lado.",
+    "purpose": "Ideal para el caballero que busca una apariencia pulcra, formal y brillante estilo clásico. Permite repeinar durante el día con unas gotas de agua en el peine.",
+    "techDetails": "Base acuosa 100% soluble. Contiene aloe vera puro, glicerina vegetal y provitamina B5 para mantener la hebra capilar hidratada sin apelmazar.",
+    "howToUse": "Trabajar sobre cabello ligeramente húmedo para un brillo pulido o seco para mayor fijación. Distribuir con peine de cerdas cerradas para definir rayas limpias."
+  },
+  {
+    "id": "prod-3",
+    "name": "Tónico Capilar Fortificante & Grooming",
+    "brand": "Act+Acre Cold Processed",
+    "specs": "200 ml / 6.7 fl oz • Atomizador",
+    "price": 160,
+    "priceStr": "Q160",
+    "category": "cabello",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800",
+    "shortDesc": "Con extractos puros de romero, menta y biotina. Aporta cuerpo, ligereza y protección térmica antes del uso del secador.",
+    "purpose": "Pre-estilizador esencial para engrosar el cabello fino, refrescar el cuero cabelludo tras el corte y proteger la cutícula del calor extremo del secador y plancha.",
+    "techDetails": "Destilado botánico en frío con mentol natural, aceite esencial de romero criollo, biotina de alta asimilación y extracto de hoja de té verde antioxidante.",
+    "howToUse": "Vaporizar de 4 a 6 pulsaciones sobre el cabello húmedo antes del cepillado o secado. Masajear brevemente el cuero cabelludo para activar la circulación."
+  },
+  {
+    "id": "prod-4",
+    "name": "Lattafa Khamrah Eau de Parfum",
+    "brand": "Lattafa Perfumes (Dubái)",
+    "specs": "100 ml / 3.4 oz • Eau de Parfum",
+    "price": 380,
+    "priceStr": "Q380",
+    "category": "perfumeria",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800",
+    "shortDesc": "La cumbre oriental: canela dulce, nuez moscada, praliné, dátiles y un fondo embriagador de vainilla bourbon y maderas aromáticas.",
+    "purpose": "Fragancia de autor para noches, citas y ocasiones especiales donde se requiere dejar una impresión memorable, cálida, dulce y profundamente sofisticada.",
+    "techDetails": "Salida: Canela, nuez moscada y bergamota. Corazón: Dátiles, praliné crujiente, nardos y Mahonial. Fondo: Vainilla de Madagascar, haba tonka, mirra, benjuí y Akigalawood. Concentración al 20%.",
+    "howToUse": "Pulverizar en cuello, cuello de camisa y muñecas a 15 cm. No frotar para preservar las notas de salida."
+  },
+  {
+    "id": "prod-5",
+    "name": "Lattafa Asad Eau de Parfum",
+    "brand": "Lattafa Perfumes (Dubái)",
+    "specs": "100 ml / 3.4 oz • Eau de Parfum",
+    "price": 350,
+    "priceStr": "Q350",
+    "category": "perfumeria",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800",
+    "shortDesc": "Estilo masculino audaz con pimienta negra, café tostado, tabaco ahumado, iris cremoso y una estela de ámbar seco irresistible.",
+    "purpose": "Perfume masculino de alto impacto y presencia ejecutiva. Diseñado para proyectar autoridad, carácter y magnetismo durante todo el día o noche.",
+    "techDetails": "Notas de Salida: Pimienta negra, piña y tabaco rubio. Corazón: Café tostado, pachulí e iris toscano. Fondo: Ámbar gris, vainilla oscura, maderas secas y ládano. Duración superior a 10 horas.",
+    "howToUse": "Aplicar 3 o 4 pulverizaciones en pecho, laterales del cuello y detrás de las orejas."
+  },
+  {
+    "id": "prod-6",
+    "name": "Club de Nuit Intense Man (Armaf)",
+    "brand": "Armaf Parfums (Francia / UAE)",
+    "specs": "105 ml / 3.6 oz • Eau de Parfum",
+    "price": 395,
+    "priceStr": "Q395",
+    "category": "perfumeria",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800",
+    "shortDesc": "La icónica fragancia ahumada con notas de limón cítrico, piña fresca, abedul negro, jazmín y pachulí oscuro. Máxima longevidad.",
+    "purpose": "El perfume número uno en cumplidos masculinos. Versatilidad extrema para clima cálido, oficina, salidas nocturnas o eventos formales.",
+    "techDetails": "Notas de Salida: Limón, piña, bergamota, grosellas negras y manzana. Corazón: Abedul ahumado, jazmín y rosa. Fondo: Almizcle blanco, ámbar gris, pachulí y vainilla suave. Proyección de estela legendaria.",
+    "howToUse": "Atomizar generosamente en zonas de pulso tras el baño matutino o antes de salir."
+  },
+  {
+    "id": "prod-7",
+    "name": "Sauvage Elixir Edition",
+    "brand": "Dior Parfums (Francia)",
+    "specs": "60 ml / 2.0 oz • Elixir Concentrado",
+    "price": 780,
+    "priceStr": "Q780",
+    "category": "perfumeria",
+    "stock": "soldout",
+    "image": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=800",
+    "shortDesc": "Concentrado nocturno de lavanda silvestre, licor de maderas nobles, cardamomo ardiente y nuez moscada. La firma olfativa definitiva.",
+    "purpose": "La expresión olfativa de mayor concentración y lujo. Una pócima nocturna reservada para los momentos más trascendentales.",
+    "techDetails": "Licor de lavanda de Nyons AOP destilada a medida, cardamomo de Guatemala, canela, nuez moscada y una sobredosis de madera de regaliz y sándalo de Sri Lanka.",
+    "howToUse": "Bastará 1 o 2 atomizaciones únicamente debido a su densidad y longevidad extrema de 24 horas."
+  },
+  {
+    "id": "prod-8",
+    "name": "Lentes Urban Matte Black Edition",
+    "brand": "Barber Studio Optics",
+    "specs": "Montura TR-90 • Polarizado UV400",
+    "price": 220,
+    "priceStr": "Q220",
+    "category": "accesorios",
+    "stock": "available",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800",
+    "shortDesc": "Montura geométrica en negro carbón mate de alta resistencia. Lunas polarizadas con filtro UV400 y bisagras de titanio reforzado.",
+    "purpose": "Protección visual de alta gama para conducir, caminar por la ciudad y complementar un corte degradado impecable con estética moderna.",
+    "techDetails": "Lunas de triacetato polarizado de 1.1 mm anti-impacto. Bloqueo del 100% de rayos UVA/UVB hasta 400 nm. Montura indeformable de polímero suizo TR-90 peso pluma (24 gramos).",
+    "howToUse": "Limpiar con la microfibra incluida. Guardar en su estuche rígido cuando no esté en uso."
+  },
+  {
+    "id": "prod-9",
+    "name": "Lentes Aviator Gold & Dark Smoke",
+    "brand": "Barber Studio Optics",
+    "specs": "Aleación Dorada • Lunas Minerales",
+    "price": 240,
+    "priceStr": "Q240",
+    "category": "accesorios",
+    "stock": "soldout",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800",
+    "shortDesc": "Estructura metálica dorada ligera con diseño de doble puente, almohadillas de silicona anatómica y lunas ahumadas de alto confort visual.",
+    "purpose": "Silueta clásica de aviador con acabado dorado premium para un estilo retro urbano de distinción inconfundible.",
+    "techDetails": "Estructura de aleación electroplateada en oro champagne antioxidante. Cristales ahumados polarizados categoría 3 con reducción del 85% del resplandor solar.",
+    "howToUse": "Ajustar suavemente las almohadillas nasales anatómicas para un calce perfecto sobre el tabique."
+  }
+];
+
+      // ==========================================
+      // ESTADO DEL CARRITO DE COMPRAS
+      // ==========================================
+      let cart = [];
+      try {
+        const savedCart = localStorage.getItem('crisanto_cart');
+        if (savedCart) cart = JSON.parse(savedCart);
+      } catch (e) {
+        cart = [];
+      }
+
+      const cartTriggerBtn = document.getElementById('cart-trigger-btn');
+      const cartBadge = document.getElementById('cart-badge');
+      const cartTotalPill = document.getElementById('cart-total-pill');
+      const cartDrawer = document.getElementById('cart-drawer');
+      const cartDrawerBackdrop = document.getElementById('cart-drawer-backdrop');
+      const cartCloseBtn = document.getElementById('cart-close-btn');
+      const cartItemsContainer = document.getElementById('cart-items-container');
+      const cartDrawerCount = document.getElementById('cart-drawer-count');
+      const cartSubtotalText = document.getElementById('cart-subtotal-text');
+      const cartTotalText = document.getElementById('cart-total-text');
+      const cartCheckoutBtn = document.getElementById('cart-checkout-btn');
+      const cartClearBtn = document.getElementById('cart-clear-btn');
+      const cartToast = document.getElementById('cart-toast');
+      const cartToastName = document.getElementById('cart-toast-name');
+
+      // Función para mostrar Toast de confirmación
+      function showCartToast(name) {
+        if (!cartToast) return;
+        if (cartToastName) cartToastName.textContent = name;
+        cartToast.classList.remove('translate-y-6', 'opacity-0', 'pointer-events-none');
+        cartToast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          cartToast.classList.remove('translate-y-0', 'opacity-100');
+          cartToast.classList.add('translate-y-6', 'opacity-0', 'pointer-events-none');
+        }, 2500);
+      }
+
+      // Guardar y Actualizar Carrito
+      function saveCart() {
+        try {
+          localStorage.setItem('crisanto_cart', JSON.stringify(cart));
+        } catch (e) {}
+        updateCartUI();
+      }
+
+      function updateCartUI() {
+        const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+        const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+        // Actualizar botón flotante
+        if (cartBadge) {
+          if (totalItems > 0) {
+            cartBadge.textContent = totalItems;
+            cartBadge.classList.remove('hidden');
+          } else {
+            cartBadge.classList.add('hidden');
+          }
+        }
+        if (cartTotalPill) {
+          if (totalPrice > 0) {
+            cartTotalPill.textContent = 'Q' + totalPrice;
+            cartTotalPill.classList.remove('hidden');
+          } else {
+            cartTotalPill.classList.add('hidden');
+          }
+        }
+
+        // Actualizar drawer
+        if (cartDrawerCount) {
+          cartDrawerCount.textContent = totalItems === 1 ? '1 producto agregado' : totalItems + ' productos agregados';
+        }
+        if (cartSubtotalText) cartSubtotalText.textContent = 'Q' + totalPrice;
+        if (cartTotalText) cartTotalText.textContent = 'Q' + totalPrice;
+
+        if (cartCheckoutBtn) {
+          cartCheckoutBtn.disabled = totalItems === 0;
+          const textSpan = cartCheckoutBtn.querySelector('span');
+          if (textSpan) {
+            textSpan.textContent = totalItems > 0 ? 'Pedir por WhatsApp (Q' + totalPrice + ')' : 'Carrito Vacío';
+          }
+        }
+
+        // Renderizar items del carrito
+        if (cartItemsContainer) {
+          if (cart.length === 0) {
+            cartItemsContainer.innerHTML = `
+              <div class="text-center py-16 px-4">
+                <svg class="w-12 h-12 text-neutral-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <p class="text-white font-bold text-sm mb-1">Tu carrito está vacío</p>
+                <p class="text-neutral-400 text-xs mb-4">Agrega tus productos favoritos del catálogo para pedirlos juntos.</p>
+                <button type="button" class="btn-close-cart-action text-xs text-yellow-400 font-bold uppercase tracking-wider underline cursor-pointer">
+                  Explorar Catálogo
+                </button>
+              </div>
+            `;
+            const exploreBtn = cartItemsContainer.querySelector('.btn-close-cart-action');
+            if (exploreBtn) exploreBtn.addEventListener('click', closeCartDrawer);
+          } else {
+            cartItemsContainer.innerHTML = cart.map(item => `
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-black border border-[#262626] relative group">
+                <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover shrink-0 border border-[#262626]" />
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center justify-between mb-0.5">
+                    <span class="text-[10px] text-yellow-400 font-bold uppercase tracking-wider truncate">${item.brand}</span>
+                    <button type="button" class="btn-remove-item text-neutral-500 hover:text-red-400 p-1 transition-colors" data-id="${item.id}" aria-label="Eliminar producto">
+                      <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
+                  </div>
+                  <h4 class="text-xs font-bold text-white truncate mb-1">${item.name}</h4>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="text-xs font-black text-white">Q${item.price * item.quantity}</span>
+                    <div class="flex items-center gap-2 border border-[#262626] rounded-lg px-2 py-0.5 bg-[#0D0D0D]">
+                      <button type="button" class="btn-qty-minus text-neutral-400 hover:text-white font-bold text-xs" data-id="${item.id}">-</button>
+                      <span class="text-xs font-bold text-white px-1">${item.quantity}</span>
+                      <button type="button" class="btn-qty-plus text-neutral-400 hover:text-white font-bold text-xs" data-id="${item.id}">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `).join('');
+
+            // Event listeners para controles de cantidad
+            cartItemsContainer.querySelectorAll('.btn-qty-plus').forEach(b => {
+              b.addEventListener('click', () => {
+                const id = b.getAttribute('data-id');
+                const it = cart.find(x => x.id === id);
+                if (it) {
+                  it.quantity++;
+                  saveCart();
+                }
+              });
+            });
+
+            cartItemsContainer.querySelectorAll('.btn-qty-minus').forEach(b => {
+              b.addEventListener('click', () => {
+                const id = b.getAttribute('data-id');
+                const it = cart.find(x => x.id === id);
+                if (it) {
+                  it.quantity--;
+                  if (it.quantity <= 0) {
+                    cart = cart.filter(x => x.id !== id);
+                  }
+                  saveCart();
+                }
+              });
+            });
+
+            cartItemsContainer.querySelectorAll('.btn-remove-item').forEach(b => {
+              b.addEventListener('click', () => {
+                const id = b.getAttribute('data-id');
+                cart = cart.filter(x => x.id !== id);
+                saveCart();
+              });
+            });
+          }
+        }
+      }
+
+      function openCartDrawer() {
+        if (!cartDrawer || !cartDrawerBackdrop) return;
+        updateCartUI();
+        cartDrawerBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        cartDrawerBackdrop.classList.add('opacity-100');
+        cartDrawer.classList.remove('translate-x-full');
+        cartDrawer.classList.add('translate-x-0');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeCartDrawer() {
+        if (!cartDrawer || !cartDrawerBackdrop) return;
+        cartDrawerBackdrop.classList.remove('opacity-100');
+        cartDrawerBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        cartDrawer.classList.remove('translate-x-0');
+        cartDrawer.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      if (cartTriggerBtn) cartTriggerBtn.addEventListener('click', openCartDrawer);
+      if (cartCloseBtn) cartCloseBtn.addEventListener('click', closeCartDrawer);
+      if (cartDrawerBackdrop) cartDrawerBackdrop.addEventListener('click', closeCartDrawer);
+
+      if (cartClearBtn) {
+        cartClearBtn.addEventListener('click', () => {
+          if (confirm('¿Deseas vaciar todos los productos del carrito?')) {
+            cart = [];
+            saveCart();
+          }
+        });
+      }
+
+      // Checkout del Carrito completo a WhatsApp
+      if (cartCheckoutBtn) {
+        cartCheckoutBtn.addEventListener('click', () => {
+          if (cart.length === 0) return;
+          const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+          
+          let itemsList = '';
+          cart.forEach((it, idx) => {
+            itemsList += `${idx + 1}. ${it.name} (${it.specs}) x${it.quantity} = Q${it.price * it.quantity}\n`;
+          });
+
+          const message = `Hola Barber Studio Crisanto, deseo realizar el siguiente pedido desde el carrito web:\n\n${itemsList}\nTotal a Pagar: Q${totalPrice} GTQ\n\n¿Tienen disponibilidad para coordinar la entrega o retiro en el estudio?`;
+          const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+        });
+      }
+
+      // Delegación de eventos para agregar al carrito
+      document.querySelectorAll('.btn-add-to-cart').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const id = btn.getAttribute('data-id');
+          const name = btn.getAttribute('data-name');
+          const price = parseInt(btn.getAttribute('data-price'), 10) || 0;
+          const image = btn.getAttribute('data-image');
+          const brand = btn.getAttribute('data-brand');
+          const specs = btn.getAttribute('data-specs');
+
+          const existing = cart.find(x => x.id === id);
+          if (existing) {
+            existing.quantity++;
+          } else {
+            cart.push({ id, name, price, image, brand, specs, quantity: 1 });
+          }
+          saveCart();
+          showCartToast(name);
+        });
+      });
+
+      // ==========================================
+      // MODAL DE DETALLES TÉCNICOS DEL PRODUCTO
+      // ==========================================
+      const productModalBackdrop = document.getElementById('product-modal-backdrop');
+      const productModalCard = document.getElementById('product-modal-card');
+      const productModalClose = document.getElementById('product-modal-close');
+      const productModalContent = document.getElementById('product-modal-content');
+
+      function openProductModal(productId) {
+        const prod = productsData.find(p => p.id === productId);
+        if (!prod || !productModalContent) return;
+
+        const isSoldOut = prod.stock === 'soldout';
+
+        productModalContent.innerHTML = `
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start pt-2">
+            
+            <!-- Imagen del Producto -->
+            <div class="md:col-span-5 relative aspect-square rounded-2xl overflow-hidden bg-black border border-[#262626]">
+              <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover ${isSoldOut ? 'opacity-50 grayscale-[40%]' : ''}" />
+              ${isSoldOut ? `
+                <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-red-600 text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
+                  SOLD OUT
+                </div>
+              ` : ''}
+            </div>
+
+            <!-- Ficha Técnica y Contenido -->
+            <div class="md:col-span-7 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1.5 flex-wrap">
+                  <span class="text-xs font-bold uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2.5 py-0.5 rounded border border-yellow-400/30">${prod.brand}</span>
+                  <span class="text-xs text-neutral-400 font-semibold">${prod.specs}</span>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-black text-white leading-snug mb-3">${prod.name}</h3>
+                
+                <div class="flex items-baseline gap-2 mb-5 pb-4 border-b border-[#262626]">
+                  <span class="text-2xl sm:text-3xl font-extrabold text-white">${prod.priceStr}</span>
+                  <span class="text-xs uppercase text-neutral-400 font-semibold">${isSoldOut ? 'Agotado Temporalmente' : 'Disponibilidad Inmediata'}</span>
+                </div>
+
+                <div class="space-y-4 text-xs">
+                  <div>
+                    <h4 class="text-yellow-400 font-bold uppercase tracking-wider text-[11px] mb-1">¿Para qué sirve?</h4>
+                    <p class="text-neutral-200 leading-relaxed">${prod.purpose}</p>
+                  </div>
+
+                  <div>
+                    <h4 class="text-yellow-400 font-bold uppercase tracking-wider text-[11px] mb-1">Detalles Técnicos & Formulación</h4>
+                    <p class="text-neutral-300 leading-relaxed">${prod.techDetails}</p>
+                  </div>
+
+                  <div>
+                    <h4 class="text-yellow-400 font-bold uppercase tracking-wider text-[11px] mb-1">Modo de Uso Recomendado</h4>
+                    <p class="text-neutral-300 leading-relaxed">${prod.howToUse}</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Acciones del Modal -->
+              <div class="pt-6 mt-6 border-t border-[#262626]">
+                ${isSoldOut ? `
+                  <button 
+                    type="button" 
+                    class="btn-sold-out-inquiry w-full py-3.5 px-4 rounded-2xl bg-red-950/40 hover:bg-red-900/60 text-red-300 hover:text-white border border-red-700/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                    data-name="${prod.name}"
+                    data-price="${prod.priceStr}"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                    <span>Agotado • Consultar Reingreso por WhatsApp</span>
+                  </button>
+                ` : `
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <button 
+                      type="button" 
+                      class="btn-modal-add-cart btn-white-shine w-full py-3.5 px-4 rounded-2xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2"
+                      data-id="${prod.id}"
+                      data-name="${prod.name}"
+                      data-price="${prod.price}"
+                      data-pricestr="${prod.priceStr}"
+                      data-image="${prod.image}"
+                      data-brand="${prod.brand}"
+                      data-specs="${prod.specs}"
+                    >
+                      <svg class="w-4 h-4 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                      </svg>
+                      <span>Agregar al Carrito</span>
+                    </button>
+                    <button 
+                      type="button" 
+                      class="btn-modal-direct-wa w-full py-3.5 px-4 rounded-2xl bg-[#000000] hover:bg-[#25D366] text-[#25D366] hover:text-black border border-[#25D366]/40 hover:border-[#25D366] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                      data-name="${prod.name}"
+                      data-price="${prod.priceStr}"
+                    >
+                      <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                      </svg>
+                      <span>Comprar Directo</span>
+                    </button>
+                  </div>
+                `}
+              </div>
+            </div>
+
+          </div>
+        `;
+
+        // Listeners dentro del modal
+        const addCartBtn = productModalContent.querySelector('.btn-modal-add-cart');
+        if (addCartBtn) {
+          addCartBtn.addEventListener('click', () => {
+            const id = addCartBtn.getAttribute('data-id');
+            const name = addCartBtn.getAttribute('data-name');
+            const price = parseInt(addCartBtn.getAttribute('data-price'), 10) || 0;
+            const image = addCartBtn.getAttribute('data-image');
+            const brand = addCartBtn.getAttribute('data-brand');
+            const specs = addCartBtn.getAttribute('data-specs');
+
+            const existing = cart.find(x => x.id === id);
+            if (existing) {
+              existing.quantity++;
+            } else {
+              cart.push({ id, name, price, image, brand, specs, quantity: 1 });
+            }
+            saveCart();
+            showCartToast(name);
+            closeProductModal();
+            openCartDrawer();
+          });
+        }
+
+        const directWaBtn = productModalContent.querySelector('.btn-modal-direct-wa');
+        if (directWaBtn) {
+          directWaBtn.addEventListener('click', () => {
+            const name = directWaBtn.getAttribute('data-name');
+            const price = directWaBtn.getAttribute('data-price');
+            const message = `Hola Barber Studio Crisanto, deseo comprar directamente el producto "${name}" (${price}) visto en su catálogo web.`;
+            const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+          });
+        }
+
+        const soldOutInquiryBtn = productModalContent.querySelector('.btn-sold-out-inquiry');
+        if (soldOutInquiryBtn) {
+          soldOutInquiryBtn.addEventListener('click', () => {
+            const name = soldOutInquiryBtn.getAttribute('data-name');
+            const price = soldOutInquiryBtn.getAttribute('data-price');
+            const message = `Hola Barber Studio Crisanto, veo en su catálogo que el producto "${name}" (${price}) figura como SOLD OUT (Agotado). ¿Cuándo tendrán nuevo reingreso disponible para apartar el mío?`;
+            const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+          });
+        }
+
+        productModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        productModalBackdrop.classList.add('opacity-100');
+        if (productModalCard) {
+          productModalCard.classList.remove('scale-95');
+          productModalCard.classList.add('scale-100');
+        }
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeProductModal() {
+        if (!productModalBackdrop) return;
+        productModalBackdrop.classList.remove('opacity-100');
+        productModalBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        if (productModalCard) {
+          productModalCard.classList.remove('scale-100');
+          productModalCard.classList.add('scale-95');
+        }
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      document.querySelectorAll('.btn-open-modal').forEach(el => {
+        el.addEventListener('click', () => {
+          const id = el.getAttribute('data-id');
+          if (id) openProductModal(id);
+        });
+      });
+
+      if (productModalClose) productModalClose.addEventListener('click', closeProductModal);
+      if (productModalBackdrop) {
+        productModalBackdrop.addEventListener('click', (e) => {
+          if (e.target === productModalBackdrop) closeProductModal();
+        });
+      }
+
+      // Inicializar estado visual del carrito en carga
+      updateCartUI();
+
     });
   </script>
+
+
+
+  <!-- BOTÓN FLOTANTE DEL CARRITO (PARTE INFERIOR DERECHA) -->
+  <button 
+    id="cart-trigger-btn" 
+    type="button" 
+    class="fixed bottom-6 right-6 z-40 btn-white-shine flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-full text-xs uppercase tracking-wider font-extrabold shadow-[0_0_30px_rgba(255,255,255,0.35)] cursor-pointer focus:outline-none"
+    aria-label="Abrir Carrito de Compras"
+  >
+    <div class="relative">
+      <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+      <span id="cart-badge" class="absolute -top-2.5 -right-2.5 w-5 h-5 rounded-full bg-[#25D366] text-black font-black text-[10px] flex items-center justify-center shadow-md hidden animate-bounce">0</span>
+    </div>
+    <span class="hidden sm:inline">Carrito</span>
+    <span id="cart-total-pill" class="text-xs font-black text-black ml-1 hidden">Q0</span>
+  </button>
+
+  <!-- DRAWER / PANEL LATERAL DEL CARRITO DE COMPRAS -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+  <aside 
+    id="cart-drawer" 
+    class="fixed inset-y-0 right-0 max-w-md w-full bg-[#0A0A0A] border-l border-[#262626] z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between"
+    aria-label="Panel del carrito de compras"
+  >
+    <!-- Encabezado del Carrito -->
+    <div class="p-6 border-b border-[#262626] flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center font-bold">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white leading-tight">Tu Carrito de Pedido</h3>
+          <span id="cart-drawer-count" class="text-[11px] text-neutral-400">0 productos agregados</span>
+        </div>
+      </div>
+      <button 
+        type="button" 
+        id="cart-close-btn" 
+        class="w-8 h-8 rounded-full border border-[#262626] hover:bg-[#1A1A1A] text-neutral-400 hover:text-white flex items-center justify-center transition-colors focus:outline-none"
+        aria-label="Cerrar Carrito"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Lista de Productos en Carrito -->
+    <div id="cart-items-container" class="p-6 overflow-y-auto flex-1 space-y-4">
+      <!-- Se puebla dinámicamente con JS -->
+    </div>
+
+    <!-- Pie del Carrito con Subtotal y Botón WhatsApp -->
+    <div class="p-6 border-t border-[#262626] bg-[#0D0D0D]">
+      <div class="space-y-2 mb-4 text-xs">
+        <div class="flex items-center justify-between text-neutral-400">
+          <span>Subtotal estimado</span>
+          <span id="cart-subtotal-text" class="text-white font-semibold">Q0</span>
+        </div>
+        <div class="flex items-center justify-between text-neutral-400">
+          <span>Entrega / Retiro</span>
+          <span class="text-yellow-400 font-semibold">Coordinación por WhatsApp</span>
+        </div>
+        <div class="flex items-center justify-between text-sm font-black text-white pt-2 border-t border-[#262626]">
+          <span>Total a Pagar</span>
+          <span id="cart-total-text" class="text-xl text-yellow-400 font-extrabold">Q0</span>
+        </div>
+      </div>
+
+      <button 
+        type="button" 
+        id="cart-checkout-btn" 
+        class="btn-white-shine w-full py-4 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-40 disabled:pointer-events-none"
+      >
+        <svg class="w-4 h-4 fill-current shrink-0 text-[#25D366]" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>Pedir Todo por WhatsApp</span>
+      </button>
+
+      <div class="text-center mt-3">
+        <button type="button" id="cart-clear-btn" class="text-[11px] text-neutral-500 hover:text-red-400 transition-colors focus:outline-none">
+          Vaciar carrito
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MODAL DE DETALLES TÉCNICOS DEL PRODUCTO (QUICK VIEW) -->
+  <div id="product-modal-backdrop" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
+    <div 
+      id="product-modal-card" 
+      class="bg-[#0D0D0D] border border-[#262626] rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8 transform scale-95 transition-transform duration-300"
+    >
+      <!-- Botón de Cerrar Modal -->
+      <button 
+        type="button" 
+        id="product-modal-close" 
+        class="absolute top-5 right-5 w-8 h-8 rounded-full border border-[#262626] hover:bg-[#1A1A1A] text-neutral-400 hover:text-white flex items-center justify-center transition-colors focus:outline-none z-10"
+        aria-label="Cerrar Detalles"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Contenido Inyectado del Producto -->
+      <div id="product-modal-content">
+        <!-- Contenido poblado dinamicamente con JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST DE NOTIFICACION DE PRODUCTO AGREGADO -->
+  <div 
+    id="cart-toast" 
+    class="fixed bottom-24 right-6 z-50 bg-neutral-900 border border-yellow-400/60 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-6 opacity-0 pointer-events-none transition-all duration-300 text-xs"
+  >
+    <div class="w-6 h-6 rounded-full bg-yellow-400 text-black flex items-center justify-center font-bold shrink-0">
+      <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-bold text-white text-xs">Producto agregado al carrito</p>
+      <p id="cart-toast-name" class="text-[11px] text-neutral-300 line-clamp-1"></p>
+    </div>
+  </div>
 
 </body>
 </html>
