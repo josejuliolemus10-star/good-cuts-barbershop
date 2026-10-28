@@ -103,6 +103,17 @@
       }
     }
   </style>
+  <!-- Scroll inicial forzado al tope (Inicio / Hero) evitando saltos a secciones como #catalogo -->
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+  </script>
 </head>
 <body class="font-sans bg-black text-white antialiased selection:bg-yellow-400 selection:text-black">
 
@@ -113,14 +124,14 @@
     <nav class="w-full px-6 sm:px-8 lg:px-12 py-6 flex justify-between items-center border-b border-[#262626]/50">
       
       <!-- IZQUIERDA: Logo -->
-      <a href="#" class="flex flex-col group">
+      <a href="#inicio" class="flex flex-col group">
         <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-[#FACC15] transition-colors leading-tight">Barber Studio Crisanto</span>
         <span class="text-[10px] text-[#E5E7EB] tracking-wider uppercase font-semibold">Dedicación en cada corte</span>
       </a>
 
       <!-- CENTRO: Enlaces en Contenedor Píldora (Solo PC) -->
       <div class="hidden md:flex items-center gap-6 bg-[#262626]/40 backdrop-blur-md rounded-full px-6 py-2 border border-[#262626]/50">
-        <a href="#" class="text-xs font-semibold uppercase tracking-wider text-[#E5E7EB] hover:text-white transition-colors">Inicio</a>
+        <a href="#inicio" class="text-xs font-semibold uppercase tracking-wider text-[#E5E7EB] hover:text-white transition-colors">Inicio</a>
         <a href="#servicios" class="text-xs font-semibold uppercase tracking-wider text-[#E5E7EB] hover:text-white transition-colors">Servicios</a>
         <a href="#catalogo" class="text-xs font-semibold uppercase tracking-wider text-[#E5E7EB] hover:text-[#FACC15] transition-colors">Catálogo</a>
         <a href="#reservas" class="text-xs font-semibold uppercase tracking-wider text-[#E5E7EB] hover:text-white transition-colors">Reservas</a>
@@ -136,7 +147,7 @@
 
     </nav>
 
-    <main>
+    <main id="inicio">
     <!-- HERO SECTION & BENTO GALLERY -->
     <section class="pt-16 pb-20 sm:pt-20 sm:pb-24">
       <div class="max-w-6xl mx-auto px-6">
@@ -2532,6 +2543,19 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Asegurar que al cargar o recargar siempre inicie desde el tope (Hero / Portada)
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
+
+      window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+      });
+
       const WHATSAPP_PHONE = '50239634710';
       
       // Control de scroll con flechas para contenedor de fechas
