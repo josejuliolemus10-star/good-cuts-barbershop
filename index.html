@@ -358,7 +358,7 @@
               </h2>
 
               <p class="text-sm sm:text-base text-[#A8A9AD] font-normal leading-relaxed mb-8">
-                Compromiso de puntualidad absoluta: elige tu sede, día y hora. Sin filas ni tiempos muertos.
+                Compromiso de puntualidad absoluta: elige tu día y hora. Sin filas ni tiempos muertos.
               </p>
 
               <div class="space-y-4 border-t border-[#454546] pt-6 text-xs sm:text-sm text-gray-300">
@@ -385,30 +385,11 @@
             <div class="lg:col-span-7">
               <div class="bg-[#101820] rounded-2xl p-6 sm:p-8 border border-[#454546]">
                 
-                <!-- Paso 1 (Sede) -->
-                <div class="mb-6">
-                  <label for="sede-select" class="block text-xs font-bold uppercase tracking-wider text-[#A8A9AD] mb-2">
-                    Paso 1: Selecciona tu Sede
-                  </label>
-                  <div class="relative">
-                    <select id="sede-select" class="w-full appearance-none bg-[#161A2B] border border-[#454546] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E5C158] focus:ring-1 focus:ring-[#E5C158] cursor-pointer pr-10 shadow-xs">
-                      <option value="Centro Cívico Sur">Centro Cívico Sur</option>
-                      <option value="San Lucas">San Lucas</option>
-                      <option value="Zona 16">Zona 16</option>
-                    </select>
-                    <div class="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#A8A9AD]">
-                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Paso 2 (Fechas: 14 Botones con navegación por flechas y scroll horizontal) -->
+                <!-- Paso 1 (Fechas: 14 Botones con navegación por flechas y scroll horizontal) -->
                 <div class="mb-6">
                   <div class="flex items-center justify-between mb-3">
                     <span class="text-xs font-bold uppercase tracking-wider text-[#A8A9AD]">
-                      Paso 2: Fechas Disponibles
+                      Paso 1: Fechas Disponibles
                     </span>
                     <div class="flex items-center gap-1.5">
                       <button 
@@ -500,10 +481,10 @@
                   </div>
                 </div>
 
-                <!-- Paso 3 (Horarios: grid-cols-3) -->
+                <!-- Paso 2 (Horarios: grid-cols-3) -->
                 <div class="mb-6">
                   <label class="block text-xs font-bold uppercase tracking-wider text-[#A8A9AD] mb-2">
-                    Paso 3: Horarios Laborales
+                    Paso 2: Horarios Laborales
                   </label>
                   <div id="time-container" class="grid grid-cols-3 gap-2">
                     <button type="button" class="time-btn py-2.5 text-center text-xs rounded-xl border transition-all bg-[#161A2B] text-white border-[#454546] hover:border-white/50 font-medium">
@@ -919,11 +900,9 @@
     document.addEventListener('DOMContentLoaded', () => {
       let selectedDate = 'Lun 26 Oct';
       let selectedTime = '09:30 AM';
-      let selectedVenue = document.getElementById('sede-select').value;
 
       const dateButtons = document.querySelectorAll('.date-btn');
       const timeButtons = document.querySelectorAll('.time-btn');
-      const venueSelect = document.getElementById('sede-select');
       const confirmBtn = document.getElementById('confirm-btn');
       const feedback = document.getElementById('booking-feedback');
 
@@ -998,14 +977,9 @@
         });
       });
 
-      // Cambio de sede
-      venueSelect.addEventListener('change', (e) => {
-        selectedVenue = e.target.value;
-      });
-
       // Confirmar reserva
       confirmBtn.addEventListener('click', () => {
-        feedback.textContent = `Turno confirmado: Sede ${selectedVenue} el ${selectedDate} a las ${selectedTime}. Te esperamos.`;
+        feedback.textContent = `Turno confirmado para el ${selectedDate} a las ${selectedTime}. Te esperamos.`;
         feedback.classList.remove('hidden');
       });
     });
