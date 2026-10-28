@@ -254,16 +254,19 @@
           <button type="button" data-service-filter="all" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-neutral-900 text-yellow-400 border-2 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.25)]">
             Todos los Combos (10)
           </button>
-          <button type="button" data-service-filter="cortes" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-[#E5E7EB] border border-[#262626] hover:text-white hover:border-[#E5E7EB]/60">
+          <button type="button" data-service-filter="populares" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-white border border-[#262626] hover:border-neutral-500">
+            Los Más Populares (6)
+          </button>
+          <button type="button" data-service-filter="cortes" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-white border border-[#262626] hover:border-neutral-500">
             Cortes & Estilo (3)
           </button>
-          <button type="button" data-service-filter="barba" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-[#E5E7EB] border border-[#262626] hover:text-white hover:border-[#E5E7EB]/60">
+          <button type="button" data-service-filter="barba" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-white border border-[#262626] hover:border-neutral-500">
             Barba & Combos (2)
           </button>
-          <button type="button" data-service-filter="facial" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-[#E5E7EB] border border-[#262626] hover:text-white hover:border-[#E5E7EB]/60">
+          <button type="button" data-service-filter="facial" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-white border border-[#262626] hover:border-neutral-500">
             Facial & Relajante (2)
           </button>
-          <button type="button" data-service-filter="quimicos" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-[#E5E7EB] border border-[#262626] hover:text-white hover:border-[#E5E7EB]/60">
+          <button type="button" data-service-filter="quimicos" class="service-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-[#0D0D0D] text-white border border-[#262626] hover:border-neutral-500">
             Rizos & Color (3)
           </button>
         </div>
@@ -272,10 +275,13 @@
         <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           
           <!-- COMBO 1: Corte de cabello (80 GTQ) -->
-          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border border-[#262626] shadow-sm hover:border-[#E5E7EB]/60 transition-all flex flex-col justify-between group" data-service-category="cortes">
+          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border border-[#262626] shadow-sm hover:border-[#E5E7EB]/60 transition-all flex flex-col justify-between group" data-service-category="cortes" data-popular="true">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-[#E5E7EB] bg-[#000000] px-2.5 py-1 rounded-md border border-[#262626]">Asicale</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-[#E5E7EB] bg-[#000000] px-2.5 py-1 rounded-md border border-[#262626]">Asicale</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded border border-yellow-400/30">Popular</span>
+                </div>
                 <span class="text-xs text-[#E5E7EB] font-semibold flex items-center gap-1">
                   <svg class="w-3.5 h-3.5 text-[#FACC15]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   1 h
@@ -313,10 +319,13 @@
           </div>
 
           <!-- COMBO 2: Corte de cabello + lavado (90 GTQ) -->
-          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border border-[#262626] shadow-sm hover:border-[#E5E7EB]/60 transition-all flex flex-col justify-between group" data-service-category="cortes">
+          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border border-[#262626] shadow-sm hover:border-[#E5E7EB]/60 transition-all flex flex-col justify-between group" data-service-category="cortes" data-popular="true">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-[#E5E7EB] bg-[#000000] px-2.5 py-1 rounded-md border border-[#262626]">Asicale</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-[#E5E7EB] bg-[#000000] px-2.5 py-1 rounded-md border border-[#262626]">Asicale</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded border border-yellow-400/30">Popular</span>
+                </div>
                 <span class="text-xs text-[#E5E7EB] font-semibold flex items-center gap-1">
                   <svg class="w-3.5 h-3.5 text-[#FACC15]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   1 h 5 min
@@ -354,10 +363,13 @@
           </div>
 
           <!-- COMBO 3: Corte + Mask carbón, lavado, tinte cejas (100 GTQ) -->
-          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border border-[#262626] shadow-sm hover:border-[#E5E7EB]/60 transition-all flex flex-col justify-between group" data-service-category="cortes">
+          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border border-[#262626] shadow-sm hover:border-[#E5E7EB]/60 transition-all flex flex-col justify-between group" data-service-category="cortes" data-popular="true">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-[#E5E7EB] bg-[#000000] px-2.5 py-1 rounded-md border border-[#262626]">Asicale Plus</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-[#E5E7EB] bg-[#000000] px-2.5 py-1 rounded-md border border-[#262626]">Asicale Plus</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded border border-yellow-400/30">Popular</span>
+                </div>
                 <span class="text-xs text-[#E5E7EB] font-semibold flex items-center gap-1">
                   <svg class="w-3.5 h-3.5 text-[#FACC15]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   1 h
@@ -440,7 +452,7 @@
           </div>
 
           <!-- COMBO 5: Corte de cabello + barba con vaporizador (135 GTQ) - DESTACADO -->
-          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border-2 border-[#FACC15] shadow-xl relative flex flex-col justify-between group transform md:-translate-y-1" data-service-category="barba">
+          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border-2 border-[#FACC15] shadow-xl relative flex flex-col justify-between group transform md:-translate-y-1" data-service-category="barba" data-popular="true">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#FACC15] text-[#000000] text-[10px] font-black uppercase tracking-wider shadow-sm">
               Más Recomendado
             </div>
@@ -531,7 +543,7 @@
           </div>
 
           <!-- COMBO 7: Combo CORTE DE CABELLO + FACIAL (180 GTQ) - DESTACADO -->
-          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border-2 border-white/40 shadow-xl relative flex flex-col justify-between group transform md:-translate-y-1" data-service-category="facial">
+          <div class="service-card bg-[#0D0D0D] rounded-3xl p-6 sm:p-7 border-2 border-white/40 shadow-xl relative flex flex-col justify-between group transform md:-translate-y-1" data-service-category="facial" data-popular="true">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-white text-[#000000] text-[10px] font-black uppercase tracking-wider shadow-sm">
               Ritual Completo VIP
             </div>
@@ -1999,7 +2011,13 @@
 
           serviceCards.forEach(card => {
             const category = card.getAttribute('data-service-category');
-            if (filter === 'all' || category === filter) {
+            const isPopular = card.getAttribute('data-popular') === 'true';
+
+            if (filter === 'all') {
+              card.style.display = 'flex';
+            } else if (filter === 'populares') {
+              card.style.display = isPopular ? 'flex' : 'none';
+            } else if (category === filter) {
               card.style.display = 'flex';
             } else {
               card.style.display = 'none';
