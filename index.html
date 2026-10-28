@@ -1080,7 +1080,7 @@
             <!-- Imagen del Producto -->
             <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-4">
               <img 
-                src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800" 
+                src="images/perfumes/lattafa_khamrah.jpg" 
                 alt="Lattafa Khamrah Eau de Parfum" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105"
@@ -1132,7 +1132,7 @@
                     data-name="Lattafa Khamrah Eau de Parfum"
                     data-price="380"
                     data-pricestr="Q380"
-                    data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800"
+                    data-image="images/perfumes/lattafa_khamrah.jpg"
                     data-brand="Lattafa Perfumes (Dubái)"
                     data-specs="100 ml / 3.4 oz • Eau de Parfum"
                   >
@@ -1164,7 +1164,7 @@
             <!-- Imagen del Producto -->
             <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-5">
               <img 
-                src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800" 
+                src="images/perfumes/lattafa_asad.jpg" 
                 alt="Lattafa Asad Eau de Parfum" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105"
@@ -1216,7 +1216,7 @@
                     data-name="Lattafa Asad Eau de Parfum"
                     data-price="350"
                     data-pricestr="Q350"
-                    data-image="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800"
+                    data-image="images/perfumes/lattafa_asad.jpg"
                     data-brand="Lattafa Perfumes (Dubái)"
                     data-specs="100 ml / 3.4 oz • Eau de Parfum"
                   >
@@ -1248,7 +1248,7 @@
             <!-- Imagen del Producto -->
             <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-6">
               <img 
-                src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800" 
+                src="images/perfumes/club_de_nuit.jpg" 
                 alt="Club de Nuit Intense Man (Armaf)" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105"
@@ -1300,7 +1300,7 @@
                     data-name="Club de Nuit Intense Man (Armaf)"
                     data-price="395"
                     data-pricestr="Q395"
-                    data-image="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800"
+                    data-image="images/perfumes/club_de_nuit.jpg"
                     data-brand="Armaf Parfums (Francia / UAE)"
                     data-specs="105 ml / 3.6 oz • Eau de Parfum"
                   >
@@ -1338,7 +1338,7 @@
             <!-- Imagen del Producto -->
             <div class="relative w-full aspect-square overflow-hidden bg-black cursor-pointer btn-open-modal" data-id="prod-7">
               <img 
-                src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=800" 
+                src="images/perfumes/sauvage_elixir.png" 
                 alt="Sauvage Elixir Edition" 
                 loading="lazy" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 contrast-105 opacity-50 grayscale-[40%]"
@@ -1730,16 +1730,35 @@
                   </div>
                 </div>
 
-                <!-- Botón Gigante Final -->
+                <!-- Resumen de Selección con Botón de Cancelar / Quitar Selección (X) -->
+                <div id="booking-selection-bar" class="flex items-center justify-between p-3.5 rounded-xl bg-[#0D0D0D] border border-yellow-400/40 mb-4 transition-all">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <span id="booking-status-indicator" class="w-2 h-2 rounded-full bg-yellow-400 shrink-0 animate-pulse"></span>
+                    <div class="min-w-0">
+                      <span class="text-neutral-400 block text-[10px] uppercase font-bold tracking-wider">Turno Seleccionado:</span>
+                      <p id="booking-summary-text" class="text-white font-extrabold text-xs sm:text-sm truncate">Lun 26 Oct a las 09:30 AM</p>
+                    </div>
+                  </div>
+                  <button 
+                    type="button" 
+                    id="btn-clear-booking" 
+                    aria-label="Quitar selección de turno" 
+                    title="Quitar selección"
+                    class="w-7 h-7 rounded-lg bg-[#262626] hover:bg-red-950/70 text-neutral-400 hover:text-red-400 border border-[#262626] hover:border-red-500/40 flex items-center justify-center transition-all focus:outline-none shrink-0 ml-2"
+                  >
+                    <svg class="w-3.5 h-3.5 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Botón Gigante Final: Envío Directo a WhatsApp -->
                 <button id="confirm-btn" type="button" class="btn-white-shine w-full py-4 rounded-xl text-base font-extrabold tracking-wide flex items-center justify-center gap-2">
-                  <span>Confirmar Reserva</span>
-                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <span>Confirmar Reserva por WhatsApp</span>
+                  <svg class="w-5 h-5 fill-current text-[#25D366]" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                   </svg>
                 </button>
-
-                <!-- Feedback de Reserva (JS) -->
-                <p id="booking-feedback" class="hidden text-xs text-center text-white mt-3 font-medium bg-[#0D0D0D] p-3 rounded-xl border border-[#262626]"></p>
 
               </div>
             </div>
@@ -1751,6 +1770,7 @@
     </section>
 
     <!-- SECCIÓN DE RESEÑAS (MASONRY DESFASADO CON EFECTO DE CARRUSEL INFINITO) -->
+        <!-- SECCION DE RESEÑAS REALES (VERIFICADAS DE TREATWELL) -->
     <section id="testimonios" class="py-24 sm:py-32 bg-[#000000] border-t border-[#262626] relative overflow-hidden">
       
       <!-- Máscaras de desvanecimiento lateral para efecto infinito/asomado -->
@@ -1759,9 +1779,12 @@
 
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center max-w-xl mx-auto mb-16 sm:mb-20">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#E5E7EB] mb-2 block">Experiencias Reales</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-[#262626] text-[11px] text-[#E5E7EB] font-semibold mb-3">
+            <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+            93 Opiniones Verificadas • Calificación 4.9/5
+          </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Lo que dicen de <span class="font-serif italic font-normal text-[#E5E7EB]">nosotros.</span>
+            Opiniones de nuestros <span class="font-serif italic font-normal text-yellow-400">clientes.</span>
           </h2>
         </div>
       </div>
@@ -1771,9 +1794,12 @@
         
         <!-- Columna Asomada Izquierda (Baja Opacidad) -->
         <div class="hidden xl:flex flex-col gap-6 w-72 sm:w-80 shrink-0 opacity-30 select-none pointer-events-none transform -translate-y-2">
+          
+          <!-- Tarjeta: Antonio C (Ondulado) -->
           <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1781,26 +1807,56 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "Servicio impecable en cada visita. La puntualidad y pulcritud son inmejorables."
+                "Muy buen servicio, recomendado. Excelente atención y el resultado del ondulado quedó perfecto."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=120" alt="Avatar Cliente" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-purple-950/60 text-purple-300 flex items-center justify-center font-bold text-xs shrink-0 border border-purple-500/30">
+                AC
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Marcos Véliz</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Cliente / Zona 16</p>
+                <p class="text-xs font-bold text-white leading-tight">Antonio C</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 7 meses • Ondulado • con Melisa</p>
               </div>
             </div>
           </div>
+
+          <!-- Tarjeta: Luizz G -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between">
+            <div>
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Excelente atención. El barbero muy profesional y el ambiente del estudio es muy cómodo."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
+              <div class="w-10 h-10 rounded-full bg-emerald-950/60 text-emerald-300 flex items-center justify-center font-bold text-xs shrink-0 border border-emerald-500/30">
+                LG
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Luizz G</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 6 meses • Corte de cabello • con Tony</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Columna 1: Desfase translate-y-8 -->
         <div class="flex flex-col gap-6 w-72 sm:w-80 shrink-0 transform translate-y-8">
           
-          <!-- Tarjeta 1 -->
-          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-[#E5E7EB]/50 transition-all">
+          <!-- Tarjeta: Stev F (Viajo 17 km) -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1808,22 +1864,25 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "Excelente atención, el mejor fade de Villa Nueva. Puntuales y con un nivel de detalle impecable en cada corte."
+                "Viajo 17 kilometros para mi corte perfecto, garantizado!!"
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=120" alt="Avatar Carlos Morales" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-amber-950/60 text-yellow-400 flex items-center justify-center font-bold text-xs shrink-0 border border-yellow-400/30">
+                SF
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Carlos Morales</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Cliente Frecuente / Villa Nueva</p>
+                <p class="text-xs font-bold text-white leading-tight">Stev F</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 5 meses • Corte de cabello + barba en seco • con Crisanto</p>
               </div>
             </div>
           </div>
 
-          <!-- Tarjeta 2 -->
-          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-[#E5E7EB]/50 transition-all">
+          <!-- Tarjeta: Kenneth L -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1831,27 +1890,56 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "Productos de primera y navajas esterilizadas. La limpieza y el profesionalismo se notan desde que entras."
+                "Excelente atención al cliente, muy higiénico y el personal es muy amable."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=120" alt="Avatar Esteban Castillo" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-blue-950/60 text-blue-300 flex items-center justify-center font-bold text-xs shrink-0 border border-blue-500/30">
+                KL
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Esteban Castillo</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Diseñador Gráfico / Zona 16</p>
+                <p class="text-xs font-bold text-white leading-tight">Kenneth L</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 4 meses • Corte de cabello + lavado • con Crisanto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta: Carlos O -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
+            <div>
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Excelente atención, puntualidad en el turno y un corte muy bien terminado."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
+              <div class="w-10 h-10 rounded-full bg-indigo-950/60 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0 border border-indigo-500/30">
+                CO
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Carlos O</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 6 meses • Corte de cabello • con Crisanto</p>
               </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Columna 2: Central con Desfase -translate-y-4 -->
+        <!-- Columna 2: Desfase -translate-y-4 (Central) -->
         <div class="flex flex-col gap-6 w-72 sm:w-80 shrink-0 transform -translate-y-4">
           
-          <!-- Tarjeta 3 -->
-          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-[#E5E7EB]/50 transition-all">
+          <!-- Tarjeta: Antonio C (El mejor barbero de Villa Nueva) -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1859,22 +1947,62 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "El ritual de toalla caliente y navaja japonesa es insuperable. Un servicio de calidad boutique en San Lucas."
+                "El mejor barbero de villa nueva. Hace su trabajo con mucha dedicación, muy recomendado."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120" alt="Avatar Rodrigo Salazar" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-neutral-800 text-white flex items-center justify-center font-bold text-xs shrink-0 border border-[#262626]">
+                AC
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Rodrigo Salazar</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Empresario / San Lucas Sacatepéquez</p>
+                <p class="text-xs font-bold text-white leading-tight">Antonio C</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 10 meses • Corte de cabello • con Crisanto</p>
               </div>
             </div>
           </div>
 
-          <!-- Tarjeta 4 -->
-          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-[#E5E7EB]/50 transition-all">
+          <!-- Tarjeta: Adrian (Con respuesta de Crisanto) -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-3 font-medium">
+                "Muy buen servicio."
+              </p>
+              <!-- Respuesta oficial -->
+              <div class="mt-2 p-3 rounded-xl bg-black border border-[#262626] flex items-start gap-2.5">
+                <div class="w-6 h-6 rounded-full bg-yellow-400 text-black flex items-center justify-center font-extrabold text-[10px] shrink-0">
+                  C
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-white leading-tight">Crisanto C</p>
+                  <p class="text-[10px] text-neutral-400">Respondido hace 6 meses</p>
+                  <p class="text-xs text-neutral-300 mt-1">Gracias bro</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#262626] mt-4">
+              <div class="w-10 h-10 rounded-full bg-cyan-950/60 text-cyan-300 flex items-center justify-center font-bold text-xs shrink-0 border border-cyan-500/30">
+                A
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Adrian</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 6 meses • Corte de cabello • con Crisanto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta: Adrián P -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
+            <div>
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1882,14 +2010,16 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "Siempre puntuales y el café de cortesía es un detalle 10/10. Muy agradecido con el servicio impecable."
+                "Muy buen trabajo y tratado."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=120" alt="Avatar Javier Méndez" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-violet-950/60 text-violet-300 flex items-center justify-center font-bold text-xs shrink-0 border border-violet-500/30">
+                AP
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Javier Méndez</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Consultor / Ciudad de Guatemala</p>
+                <p class="text-xs font-bold text-white leading-tight">Adrián P</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 6 meses • Corte de cabello • con Crisanto</p>
               </div>
             </div>
           </div>
@@ -1899,10 +2029,11 @@
         <!-- Columna 3: Desfase translate-y-12 -->
         <div class="flex flex-col gap-6 w-72 sm:w-80 shrink-0 transform translate-y-12">
           
-          <!-- Tarjeta 5 -->
-          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-[#E5E7EB]/50 transition-all">
+          <!-- Tarjeta: Stev F (El mejor) -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1910,22 +2041,25 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "Instalaciones de primer nivel en Plaza Cascata. El sistema de reserva online te ahorra horas de espera."
+                "El mejor barbero. Siempre salgo satisfecho con el resultado."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120" alt="Avatar Diego Arriola" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-amber-950/60 text-yellow-400 flex items-center justify-center font-bold text-xs shrink-0 border border-yellow-400/30">
+                SF
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Diego Arriola</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Arquitecto / Zona 16</p>
+                <p class="text-xs font-bold text-white leading-tight">Stev F</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 11 meses • Corte de cabello • con Crisanto</p>
               </div>
             </div>
           </div>
 
-          <!-- Tarjeta 6 -->
-          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-[#E5E7EB]/50 transition-all">
+          <!-- Tarjeta: Antonio C (Buen servicio, muy profesional) -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1933,14 +2067,42 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "Excelente paciencia con los cortes para niños. Mi hijo de 7 años siempre pide venir a Barber Studio Crisanto."
+                "Buen servicio, muy profesional. El corte con lavado te deja como nuevo."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=120" alt="Avatar Alejandro Fuentes" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-neutral-800 text-white flex items-center justify-center font-bold text-xs shrink-0 border border-[#262626]">
+                AC
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Alejandro Fuentes</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Padre de Familia / Villa Nueva</p>
+                <p class="text-xs font-bold text-white leading-tight">Antonio C</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 7 meses • Corte de cabello + lavado • con Crisanto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta Genérica Auténtica: Diego M -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between hover:border-yellow-400/50 transition-all">
+            <div>
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Qué buen corte me hicieron, el degradado quedó al cien y muy limpio todo el proceso en el estudio."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
+              <div class="w-10 h-10 rounded-full bg-teal-950/60 text-teal-300 flex items-center justify-center font-bold text-xs shrink-0 border border-teal-500/30">
+                DM
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Diego M</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 2 meses • Corte de cabello • con Crisanto</p>
               </div>
             </div>
           </div>
@@ -1949,9 +2111,12 @@
 
         <!-- Columna Asomada Derecha (Baja Opacidad) -->
         <div class="hidden xl:flex flex-col gap-6 w-72 sm:w-80 shrink-0 opacity-30 select-none pointer-events-none transform translate-y-4">
+          
+          <!-- Tarjeta: Carlos O (Muy buen servicio) -->
           <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-1 text-[#E5E7EB] mb-3.5">
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1959,38 +2124,67 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               </div>
               <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
-                "La mejor opción para mantener el estilo sin esperas en Centro Cívico Sur."
+                "Muy buen servicio. Dedicación en cada detalle y buen trato."
               </p>
             </div>
             <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=120" alt="Avatar Cliente" class="w-10 h-10 rounded-full bg-[#262626] object-cover shrink-0 border border-[#262626]" />
+              <div class="w-10 h-10 rounded-full bg-indigo-950/60 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0 border border-indigo-500/30">
+                CO
+              </div>
               <div>
-                <p class="text-xs font-bold text-white leading-tight">Gabriel Soto</p>
-                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Cliente / Villa Nueva</p>
+                <p class="text-xs font-bold text-white leading-tight">Carlos O</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 6 meses • Corte de cabello • con Crisanto</p>
               </div>
             </div>
           </div>
+
+          <!-- Tarjeta Genérica Auténtica: Javier R -->
+          <div class="bg-[#0D0D0D] p-6 rounded-2xl shadow-sm border border-[#262626] flex flex-col justify-between">
+            <div>
+              
+              <div class="flex items-center gap-1 text-yellow-400 mb-3.5">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6 font-medium">
+                "Puntualidad de primera y el perfilado de barba quedó nítido. Recomendadísimo."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#262626]">
+              <div class="w-10 h-10 rounded-full bg-rose-950/60 text-rose-300 flex items-center justify-center font-bold text-xs shrink-0 border border-rose-500/30">
+                JR
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white leading-tight">Javier R</p>
+                <p class="text-[11px] text-[#E5E7EB] mt-0.5 leading-tight">Hace 3 meses • Corte + barba • con Crisanto</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
 
     <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ FUNCIONALES) -->
+        <!-- SECCION DE PREGUNTAS FRECUENTES (FAQ ACTUALIZADO) -->
     <section id="faq" class="py-20 sm:py-24 bg-[#000000] border-t border-[#262626]">
       <div class="max-w-3xl mx-auto px-6">
         
-        <!-- Título: 'Preguntas' en Serif cursiva, 'Frecuentes' en Sans-serif normal -->
         <div class="text-center mb-14">
           <span class="text-xs font-bold uppercase tracking-widest text-[#E5E7EB] mb-2 block">Dudas Comunes</span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            <span class="font-serif italic font-normal text-[#E5E7EB]">Preguntas</span> Frecuentes.
+            <span class="font-serif italic font-normal text-yellow-400">Preguntas</span> Frecuentes.
           </h2>
         </div>
 
-        <!-- Lista Apilada de 5 Preguntas con details y summary -->
+        <!-- Lista Apilada de Preguntas -->
         <div class="space-y-3">
           
-          <!-- Pregunta 1 -->
+          <!-- Pregunta 1: Duración -->
           <details class="group bg-[#0D0D0D] rounded-xl border border-[#262626] p-4 cursor-pointer shadow-xs transition hover:border-[#E5E7EB]/60">
             <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
               <span>¿Cuánto tiempo dura el servicio?</span>
@@ -2001,14 +2195,14 @@
               </div>
             </summary>
             <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#262626] mt-3">
-              Un corte clásico toma entre 30 y 40 minutos. Si seleccionas el Plan Ejecutivo o Premium con ritual de barba y toalla caliente, el tiempo es de 50 a 60 minutos dedicados exclusivamente a ti.
+              Un corte clásico toma entre 30 y 45 minutos. Si seleccionas un combo completo como corte con barba o lavado, el tiempo estimado es de 50 a 60 minutos con dedicación exclusiva en cada detalle.
             </div>
           </details>
 
-          <!-- Pregunta 2 -->
+          <!-- Pregunta 2: Pagos -->
           <details class="group bg-[#0D0D0D] rounded-xl border border-[#262626] p-4 cursor-pointer shadow-xs transition hover:border-[#E5E7EB]/60">
             <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
-              <span>¿Aceptan tarjeta y pagos digitales?</span>
+              <span>¿Aceptan transferencias y pagos digitales?</span>
               <div class="w-7 h-7 rounded-lg bg-[#262626] text-[#E5E7EB] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#262626]">
                 <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -2016,14 +2210,14 @@
               </div>
             </summary>
             <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#262626] mt-3">
-              Sí, aceptamos todas las tarjetas de crédito y débito (Visa y Mastercard), transferencias bancarias directas y pagos en efectivo en cualquiera de nuestras tres sedes.
+              Sí, aceptamos pagos en efectivo en quetzales (GTQ), transferencias bancarias locales y depósitos directos. Puedes cancelar cómodamente al finalizar tu corte en nuestro estudio en Villa Nueva.
             </div>
           </details>
 
-          <!-- Pregunta 3 -->
+          <!-- Pregunta 3: Horarios -->
           <details class="group bg-[#0D0D0D] rounded-xl border border-[#262626] p-4 cursor-pointer shadow-xs transition hover:border-[#E5E7EB]/60">
             <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
-              <span>¿Qué pasa si llego tarde a mi turno?</span>
+              <span>¿Cuáles son los días y horarios de atención?</span>
               <div class="w-7 h-7 rounded-lg bg-[#262626] text-[#E5E7EB] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#262626]">
                 <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -2031,11 +2225,11 @@
               </div>
             </summary>
             <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#262626] mt-3">
-              Contamos con una tolerancia de 10 minutos de cortesía. Si prevés un retraso superior, avísanos con anticipación por WhatsApp para reajustar tu espacio sin contratiempos.
+              Atendemos de Lunes a Jueves con horario corrido: Lunes de 08:00 a 20:00 hrs, y de Martes a Jueves de 09:00 a 20:00 hrs. Los días Viernes, Sábado y Domingo el estudio permanece cerrado.
             </div>
           </details>
 
-          <!-- Pregunta 4 -->
+          <!-- Pregunta 4: Reserva previa -->
           <details class="group bg-[#0D0D0D] rounded-xl border border-[#262626] p-4 cursor-pointer shadow-xs transition hover:border-[#E5E7EB]/60">
             <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
               <span>¿Es necesario reservar cita previa o atienden por orden de llegada?</span>
@@ -2046,11 +2240,26 @@
               </div>
             </summary>
             <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#262626] mt-3">
-              Puedes visitarnos sin cita previa según disponibilidad, pero reservar en línea garantiza que tu barbero esté listo para recibirte en el minuto exacto sin esperas.
+              Recomendamos ampliamente reservar tu turno directamente en la plataforma o por WhatsApp. De esta manera garantizas tu horario exacto sin tiempos de espera. La confirmación es instantánea al WhatsApp de Crisanto.
             </div>
           </details>
 
-          <!-- Pregunta 5 -->
+          <!-- Pregunta 5: Puntualidad y cancelaciones -->
+          <details class="group bg-[#0D0D0D] rounded-xl border border-[#262626] p-4 cursor-pointer shadow-xs transition hover:border-[#E5E7EB]/60">
+            <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
+              <span>¿Qué pasa si llego tarde a mi turno o necesito reprogramar?</span>
+              <div class="w-7 h-7 rounded-lg bg-[#262626] text-[#E5E7EB] group-open:text-white flex items-center justify-center shrink-0 ml-4 group-open:rotate-45 transition-transform duration-200 shadow-xs border border-[#262626]">
+                <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+            </summary>
+            <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#262626] mt-3">
+              Contamos con una tolerancia de 10 minutos de cortesía. Si prevés un retraso o necesitas mover tu cita, simplemente avísanos por WhatsApp con anticipación para reprogramar tu espacio sin contratiempos.
+            </div>
+          </details>
+
+          <!-- Pregunta 6: Higiene y esterilización -->
           <details class="group bg-[#0D0D0D] rounded-xl border border-[#262626] p-4 cursor-pointer shadow-xs transition hover:border-[#E5E7EB]/60">
             <summary class="flex items-center justify-between font-bold text-white text-sm sm:text-base select-none">
               <span>¿Qué medidas de higiene y esterilización aplican?</span>
@@ -2061,7 +2270,7 @@
               </div>
             </summary>
             <div class="pt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#262626] mt-3">
-              Empleamos navajas descartables de un solo uso y esterilizamos cada herramienta metálica en solución de grado hospitalario y luz UV antes de atender a cada cliente.
+              Empleamos navajas descartables de un solo uso por cliente y esterilizamos minuciosamente cada máquina, tijera y herramienta con solución desinfectante y lámpara UV antes de atender a cada cliente.
             </div>
           </details>
 
@@ -2410,28 +2619,99 @@
           btn.classList.remove(...inactiveTimeClasses);
           btn.classList.add(...activeBtnClasses);
           selectedTime = btn.textContent.trim();
+          updateBookingSummaryUI();
         });
       });
 
-      // Confirmar reserva con notificación a WhatsApp
+      // Controlador de Reserva con Envío Directo a WhatsApp, Reset y Botón de Limpiar (X)
+      const btnClearBooking = document.getElementById('btn-clear-booking');
+      const bookingSummaryText = document.getElementById('booking-summary-text');
+      const bookingStatusIndicator = document.getElementById('booking-status-indicator');
+      const bookingSelectionBar = document.getElementById('booking-selection-bar');
+
+      function updateBookingSummaryUI() {
+        if (!bookingSummaryText) return;
+        if (selectedDate && selectedTime) {
+          bookingSummaryText.textContent = `${selectedDate} a las ${selectedTime}`;
+          if (bookingStatusIndicator) {
+            bookingStatusIndicator.className = 'w-2 h-2 rounded-full bg-yellow-400 shrink-0 animate-pulse';
+          }
+          if (bookingSelectionBar) {
+            bookingSelectionBar.className = 'flex items-center justify-between p-3.5 rounded-xl bg-[#0D0D0D] border border-yellow-400/40 mb-4 transition-all';
+          }
+          if (confirmBtn) {
+            confirmBtn.disabled = false;
+            confirmBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+          }
+        } else if (selectedDate) {
+          bookingSummaryText.textContent = `${selectedDate} (Selecciona un horario)`;
+        } else if (selectedTime) {
+          bookingSummaryText.textContent = `${selectedTime} (Selecciona una fecha)`;
+        } else {
+          bookingSummaryText.textContent = 'Ningún turno seleccionado (Elige fecha y horario)';
+          if (bookingStatusIndicator) {
+            bookingStatusIndicator.className = 'w-2 h-2 rounded-full bg-neutral-600 shrink-0';
+          }
+          if (bookingSelectionBar) {
+            bookingSelectionBar.className = 'flex items-center justify-between p-3.5 rounded-xl bg-[#0D0D0D] border border-[#262626] mb-4 transition-all';
+          }
+        }
+      }
+
+      function resetBookingSelection() {
+        selectedDate = null;
+        selectedTime = null;
+
+        dateButtons.forEach(b => {
+          b.classList.remove(...activeBtnClasses);
+          b.classList.add(...inactiveBtnClasses);
+          const dLabel = b.querySelector('.day-label');
+          const numLabel = b.querySelector('.date-label');
+          if (dLabel) dLabel.className = 'day-label block text-[10px] uppercase text-[#E5E7EB]';
+          if (numLabel) numLabel.className = 'date-label text-xs font-medium text-white';
+        });
+
+        timeButtons.forEach(b => {
+          b.classList.remove(...activeBtnClasses);
+          b.classList.add(...inactiveTimeClasses);
+        });
+
+        updateBookingSummaryUI();
+      }
+
+      if (btnClearBooking) {
+        btnClearBooking.addEventListener('click', resetBookingSelection);
+      }
+
+      // Reemplazo del listener de confirmación para envío inmediato a WhatsApp y reinicio
       if (confirmBtn) {
         confirmBtn.addEventListener('click', () => {
-          const bookingMsg = `Hola Barber Studio Crisanto, deseo confirmar mi cita para el ${selectedDate} a las ${selectedTime}.`;
+          if (!selectedDate || !selectedTime) {
+            if (bookingSummaryText) {
+              bookingSummaryText.textContent = 'Por favor selecciona fecha y horario antes de confirmar';
+              if (bookingSelectionBar) {
+                bookingSelectionBar.className = 'flex items-center justify-between p-3.5 rounded-xl bg-red-950/40 border border-red-500/60 mb-4 transition-all';
+              }
+            }
+            return;
+          }
+
+          const currentMsgDate = selectedDate;
+          const currentMsgTime = selectedTime;
+          const bookingMsg = `Hola Barber Studio Crisanto, deseo confirmar mi cita para el ${currentMsgDate} a las ${currentMsgTime}.`;
           const bookingWaUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(bookingMsg)}`;
 
-          feedback.innerHTML = `
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
-              <div>
-                <p class="font-bold text-white text-xs sm:text-sm">Turno registrado: ${selectedDate} a las ${selectedTime}.</p>
-                <p class="text-neutral-300 text-[11px] mt-0.5">Notifícalo a tu barbero directamente para asegurar tu espacio:</p>
-              </div>
-              <a href="${bookingWaUrl}" target="_blank" rel="noopener noreferrer" class="btn-white-shine shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs uppercase tracking-wider">
-                <svg class="w-3.5 h-3.5 fill-current text-[#25D366]" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                <span>Avisar por WhatsApp</span>
-              </a>
-            </div>
-          `;
-          feedback.classList.remove('hidden');
+          // Envío inmediato a WhatsApp
+          window.open(bookingWaUrl, '_blank');
+
+          // Reinicio automático de la selección por si se confirmó por error o para una nueva cita
+          resetBookingSelection();
+          if (bookingSummaryText) {
+            bookingSummaryText.textContent = `Turno para ${currentMsgDate} a las ${currentMsgTime} enviado a WhatsApp`;
+            if (bookingStatusIndicator) {
+              bookingStatusIndicator.className = 'w-2 h-2 rounded-full bg-[#25D366] shrink-0';
+            }
+          }
         });
       }
 
@@ -2655,7 +2935,7 @@
     "priceStr": "Q380",
     "category": "perfumeria",
     "stock": "available",
-    "image": "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800",
+    "image": "images/perfumes/lattafa_khamrah.jpg",
     "shortDesc": "La cumbre oriental: canela dulce, nuez moscada, praliné, dátiles y un fondo embriagador de vainilla bourbon y maderas aromáticas.",
     "purpose": "Fragancia de autor para noches, citas y ocasiones especiales donde se requiere dejar una impresión memorable, cálida, dulce y profundamente sofisticada.",
     "techDetails": "Salida: Canela, nuez moscada y bergamota. Corazón: Dátiles, praliné crujiente, nardos y Mahonial. Fondo: Vainilla de Madagascar, haba tonka, mirra, benjuí y Akigalawood. Concentración al 20%.",
@@ -2670,7 +2950,7 @@
     "priceStr": "Q350",
     "category": "perfumeria",
     "stock": "available",
-    "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=800",
+    "image": "images/perfumes/lattafa_asad.jpg",
     "shortDesc": "Estilo masculino audaz con pimienta negra, café tostado, tabaco ahumado, iris cremoso y una estela de ámbar seco irresistible.",
     "purpose": "Perfume masculino de alto impacto y presencia ejecutiva. Diseñado para proyectar autoridad, carácter y magnetismo durante todo el día o noche.",
     "techDetails": "Notas de Salida: Pimienta negra, piña y tabaco rubio. Corazón: Café tostado, pachulí e iris toscano. Fondo: Ámbar gris, vainilla oscura, maderas secas y ládano. Duración superior a 10 horas.",
@@ -2685,7 +2965,7 @@
     "priceStr": "Q395",
     "category": "perfumeria",
     "stock": "available",
-    "image": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=800",
+    "image": "images/perfumes/club_de_nuit.jpg",
     "shortDesc": "La icónica fragancia ahumada con notas de limón cítrico, piña fresca, abedul negro, jazmín y pachulí oscuro. Máxima longevidad.",
     "purpose": "El perfume número uno en cumplidos masculinos. Versatilidad extrema para clima cálido, oficina, salidas nocturnas o eventos formales.",
     "techDetails": "Notas de Salida: Limón, piña, bergamota, grosellas negras y manzana. Corazón: Abedul ahumado, jazmín y rosa. Fondo: Almizcle blanco, ámbar gris, pachulí y vainilla suave. Proyección de estela legendaria.",
@@ -2700,7 +2980,7 @@
     "priceStr": "Q780",
     "category": "perfumeria",
     "stock": "soldout",
-    "image": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=800",
+    "image": "images/perfumes/sauvage_elixir.png",
     "shortDesc": "Concentrado nocturno de lavanda silvestre, licor de maderas nobles, cardamomo ardiente y nuez moscada. La firma olfativa definitiva.",
     "purpose": "La expresión olfativa de mayor concentración y lujo. Una pócima nocturna reservada para los momentos más trascendentales.",
     "techDetails": "Licor de lavanda de Nyons AOP destilada a medida, cardamomo de Guatemala, canela, nuez moscada y una sobredosis de madera de regaliz y sándalo de Sri Lanka.",
